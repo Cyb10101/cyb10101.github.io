@@ -1,0 +1,70 @@
+baseURL = "https://cyb10101.github.io/"
+#baseURL = "http://github.cyb10101.localhost/"
+#languageCode = "en-us"  # This is a comment
+languageCode = "en"
+title = "Cyb10101"
+theme = "cyb-theme-001"
+
+defaultContentLanguage = "en"
+paginate = 20
+
+pygmentsStyle = "dracula"
+# pygmentsStyle = "monokai"
+# pygmentsStyle = "monokailight"
+# pygmentsStyle = "pygments"
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
+
+[params]
+    author = "Cyb10101"
+    description = "Cyb10101 personal website"
+    keywords = "blog,developer,personal"
+
+    dateFormat = "2006-01-02"
+#    dateFormat = "January 02, 2006"
+
+    # Series see also post count
+    maxSeeAlsoItems = 5
+
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github"
+    weight = 1
+    url = "https://github.com/Cyb10101/"
+
+[[params.social]]
+    name = "RSS"
+    icon = "fas fa-rss"
+    weight = 9
+    url = "/index.xml"
+    rel = "alternate"
+    type = "application/rss+xml"
+
+[taxonomies]
+  #category = "categories"
+  series = "series"
+  #tag = "tags"
+  #author = "authors"
+
+[languages]
+    [languages.en]
+        languageName = "English"
+        weight = 1
+
+    [languages.de]
+        languageName = "Deutsch"
+        weight = 2
+
+[module]
+    [[module.mounts]]
+        source = "node_modules/@fortawesome/fontawesome-free/webfonts"
+        target = "static/vendor/fontawesome/webfonts"
+
+    [[module.mounts]]
+        source = "static"
+        target = "static"
+
+[sitemap]
+   changefreq = "monthly"
+   priority = 0.5
+   filename = "sitemap.xml"

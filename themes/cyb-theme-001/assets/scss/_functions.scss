@@ -1,0 +1,56 @@
+@mixin user-select($val) {
+    -webkit-touch-callout: $val;
+    -webkit-user-select: $val;
+    -khtml-user-select: $val;
+    -moz-user-select: $val;
+    -ms-user-select: $val;
+    user-select: $val;
+}
+
+// @todo theme-color($key: "primary")
+@function palette($key) {
+    @return map-get($palette, $key);
+}
+
+@function palette-dark($key) {
+    @return map-get($palette-dark, $key);
+}
+
+@function misc($key...) {
+    @return map-get($miscc, $key);
+}
+
+/// Makes an element's :before pseudoelement a FontAwesome icon.
+/// @param {string} $content Optional content value to use.
+/// @param {string} $category Optional category to use.
+/// @param {string} $where Optional pseudoelement to target (before or after).
+@mixin iconFontAwesome($content: false, $category: regular, $where: before) {
+    text-decoration: none;
+
+    &:#{$where} {
+        @if $content {
+            content: $content;
+        }
+
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        text-transform: none !important;
+
+        @if ($category == brands) {
+            font-family: 'Font Awesome 5 Brands';
+        }
+        @elseif ($category == solid) {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+        }
+        @else {
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 400;
+        }
+    }
+}

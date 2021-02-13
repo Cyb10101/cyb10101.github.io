@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang | default "en" }}">
+<head>
+    {{/* @todo automatic redirect if page url not correct (Live reload) */}}
+    {{ if ne hugo.Environment "production" -}}
+    <script>
+        let url = new URL('{{ .Site.BaseURL }}');
+        if (url.host !== location.host) {
+            url = '{{ .Site.BaseURL }}';
+            location.href = url.replace(/\/+$/,'') + location.pathname;
+        }
+    </script>{{- end }}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="{{ .Site.Language.Lang }}">
+
+    {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+    <meta name="description" content="{{ .Description | default (.Summary | default .Site.Params.description ) }}">
+    <meta name="keywords" content="{{ (delimit .Keywords ",") | default .Site.Params.keywords }}">
+
+    {{/* @todo templates https://github.com/spf13/hugo/blob/master/tpl/tplimpl/template_embedded.go#L158
+    {{- template "_internal/opengraph.html" . -}}
+    {{- template "_internal/google_news.html" . -}}
+    {{- template "_internal/schema.html" . -}}
+    {{- template "_internal/twitter_cards.html" . -}}
+
+    {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
+    {{ template "_internal/google_analytics_async.html" . }}
+    {{ end }}
+    */}}
+
+    <title>{{ block "title" . }}{{ with .Params.Title }} | {{ . }}{{ end }}{{ .Site.Title }}{{ end }}</title>
+
+    {{ if .Permalink -}}
+        <link rel="canonical" href="{{ .Permalink }}">
+    {{- end }}
+
+    {{/* @todo preload fonts
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-brands-400.eot" as="font" type="font/eot" crossorigin>
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-brands-400.svg" as="font" type="image/svg+xml" crossorigin>
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-brands-400.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-brands-400.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-regular-400.eot" as="font" type="font/eot" crossorigin>
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-regular-400.svg" as="font" type="image/svg+xml" crossorigin>
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-regular-400.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-regular-400.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-solid-900.eot" as="font" type="font/eot" crossorigin>
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-solid-900.svg" as="font" type="image/svg+xml" crossorigin>
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-solid-900.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-solid-900.woff" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="/vendor/fontawesome/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    */}}
+
+    {{ if eq hugo.Environment "production" -}}
+        {{ $cssOpts := (dict "targetPath" "css/app.css" "enableSourceMap" true ) }}
+        {{ $styles := resources.Get "scss/app.scss" | resources.ExecuteAsTemplate "style.app.css" . | toCSS $cssOpts }}
+        <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
+    {{ else -}}
+        {{ $cssOpts := (dict "targetPath" "css/app.css" ) }}
+        {{ $styles := resources.Get "scss/app.scss" | resources.ExecuteAsTemplate "style.app.css" . | toCSS $cssOpts | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+    {{- end }}
+
+    {{/*
+    @todo RSS
+    {{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+    */}}
+
+    {{/*
+    <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_32 | default "/images/favicon-32x32.png" | relURL }}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{{ .Site.Params.favicon_16 | default "/images/favicon-16x16.png" | relURL }}" sizes="16x16">
+    <link rel="apple-touch-icon" href="{{ .Site.Params.touchicon | default "/images/apple-touch-icon.png" | relURL }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.Params.touchicon | default "/images/apple-touch-icon.png" | relURL }}">
+
+    // @todo icon
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#736257">
+    <meta name="msapplication-TileColor" content="#736257">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    {{ partialCached "site-favicon.html" . }}
+    */}}
+
+    <link rel="shortcut icon" type="image/x-icon" href="{{ "/favicon.ico" | relURL }}">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="{{ "/favicon.ico" | relURL }}">
+
+    {{ range .AlternativeOutputFormats -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+    {{ end -}}
+
+    {{ hugo.Generator }}
+</head>
+
+<body class="is-preload{{ with .File }}{{ if eq .Ext "md" }} markdown{{ end }}{{ end }}">
+    <div id="wrapper">
+        {{ partial "sidebar.html" . }}
+
+        <div id="main">
+            <header id="header">
+                <a href="/" class="logo">
+                    {{ $image := (resources.Get "images/avatar_500.png").Resize "30x q100 Box" }}
+                    <img src="{{ $image.RelPermalink }}">
+                    {{ .Site.Params.author }}
+                </a>
+                <ul class="icons">
+                    {{ with .Site.Params.social }}
+                        {{ range sort . "weight" }}
+                            <li><a href="{{ .url | safeURL }}" title="{{ .name }}" target="_blank"><i class="{{ .icon }} fa-fw"></i></a></li>
+                        {{ end }}
+                    {{ end }}
+
+                    <li><a href="#" id="dark-mode-toggle" title="Toogle dark mode"><i class="fas fa-moon"></i></a></li>
+                    {{ partial "language-menu.html" . }}
+                </ul>
+            </header>
+
+            {{/*
+            @todo Toc https://gohugo.io/content-management/toc/
+            {{- if .Params.toc -}}
+            <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+                <p class="f5 b mb3">{{ i18n "whatsInThis" . }}</p>
+                {{ .TableOfContents }}
+            </div>
+            {{- end -}}
+            */}}
+
+            {{ block "content" . }}{{ end }}
+
+            {{/*
+            @todo Related https://gohugo.io/content-management/related/
+            {{ $related := .Site.RegularPages.Related . | first 15 }}
+            {{ with $related }}
+            <div class="bg-light-gray pa3 nested-list-reset nested-copy-line-height nested-links">
+                <p class="f5 b mb3">{{ i18n "related" }}</p>
+                <ul class="pa0 list">
+                    {{ range . }}
+                    <li  class="mb2">
+                        <a href="{{ .RelPermalink }}">
+                            {{- .Title -}}
+                        </a>
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ end }}
+            */}}
+        </div>
+    </div>
+
+    {{ if eq hugo.Environment "production" -}}
+        {{ $script := resources.Get "js/app.js" | js.Build }}
+        <script src="{{ $script.RelPermalink }}"></script>
+    {{ else -}}
+        {{ $script := resources.Get "js/app.js" | js.Build | minify | fingerprint }}
+        <script src="{{ $script.RelPermalink }}"></script>
+    {{- end }}
+</body></html>

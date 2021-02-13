@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Lato:400,700|Source+Code+Pro:400,700&display=swap');
+
+$theme-colors: (
+    'primary': #0099CC,
+);
+$body-bg: #ffffff;
+$font-family-sans-serif: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace: "Source Code Pro", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: "Open Sans";
+//$font-family-base: "Lato";
+@import './node_modules/bootstrap/scss/bootstrap';
+
+$fa-font-path: "/vendor/fontawesome/webfonts";
+@import './node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import './node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import './node_modules/@fortawesome/fontawesome-free/scss/regular';
+@import './node_modules/@fortawesome/fontawesome-free/scss/solid';
+
+@import '_functions';
+
+$palette: (
+    background: #ffffff,
+    background-alternative: #f5f6f7,
+    text: #000000,
+    accent: #0099CC,
+    accent-light: #A0DDFE,
+    border: rgba(210,215,217,0.75),
+);
+
+$palette-dark: (
+    background: #000000,
+    background-alternative: #1c1818,
+    text: #ffffff,
+    accent: #0099CC,
+    accent-light: #A0DDFE,
+    border: rgba(210,215,217,0.75),
+);
+
+$misc: (
+    //family: ('Open Sans', sans-serif),
+    //family: ('Lato', sans-serif),
+    //family-code: ('Source Code Pro', monospace),
+);
+
+@import 'page';
+@import 'header';
+@import 'sidebar';
+@import 'language-menu';
+@import 'navigation-vertical';
+@import 'form';
+@import 'markdown';
+@import 'dark-mode';
