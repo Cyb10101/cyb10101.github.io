@@ -1,0 +1,49 @@
+.palette-dark {
+    color: palette-dark(text);
+    background-color: palette-dark(background);
+
+    #sidebar {
+        color: palette-dark(text);
+        background-color: palette-dark(background-alternative);
+    }
+
+    .navigation-vertical {
+        .nav-link {
+            color: palette-dark(text);
+
+            i:first-child {
+                color: palette(accent-light) !important;
+            }
+
+            &.collapsed .fa-angle-down {
+            }
+            &.active {
+                border-left: 4px solid palette-dark(accent);
+                background-color: #2f2e2e;
+            }
+        }
+        .nav-item {
+        }
+    }
+
+    .language-menu {
+        > ul {
+            background-color: palette-dark(background-alternative);
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+            a {
+                color: palette-dark(text);
+            }
+        }
+
+        &:hover {
+            > div {
+                color: palette-dark(text);
+            }
+        }
+    }
+
+    .table {
+        color: palette-dark(text);
+    }
+}

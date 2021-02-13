@@ -1,0 +1,54 @@
+[Language]
+other = "Sprache"
+
+[category]
+other = "Kategorie"
+
+[tag]
+other = "Tag"
+
+[series]
+other = "Serie"
+
+[author]
+other = "Author"
+
+[blog]
+other = "blog"
+
+[posts]
+other = "Beiträge"
+
+[reading_time]
+one = "Eine Minute Lesezeit"
+other = "{{ .Count }} Minuten Lesezeit"
+
+[page_not_found]
+other = "Seite nicht gefunden"
+
+[page_does_not_exist]
+other = "Tut mir Leid, die Seite existiert leider nicht."
+
+[head_back]
+other = "Du kannst hier zurück zur <a href=\"{{ . }}\">Startseite</a>."
+
+[see_also]
+other = "Siehe auch in"
+
+[more]
+other = "Mehr"
+
+[allTitle]
+other = "Alle {{.Title }}"
+
+[recentTitle]
+other = "Neuste {{.Title }}"
+
+[readMore]
+other = "weiterlesen"
+
+[whatsInThis]
+other = "Was ist in dieser {{ .Type }}"
+
+[related]
+other = "Ähnliches"

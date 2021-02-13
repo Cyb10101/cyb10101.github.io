@@ -1,0 +1,120 @@
+---
+title: "HTML Template"
+date: 2021-01-28T14:51:43+01:00
+draft: true
+menu:
+    main:
+        parent: "development"
+        pre: "<i class=\"fas fa-cubes mr-3 text-primary fa-fw\"></i>"
+---
+<section>
+    <div class="mb-2">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+        <hr>
+        This is <b>bold</b>, <i>italic</i>, <u>underlined</u> text.
+    </div>
+
+    <div class="mb-2">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-success">Success</button>
+        <button type="button" class="btn btn-danger">Danger</button>
+        <button type="button" class="btn btn-warning">Warning</button>
+        <button type="button" class="btn btn-info">Info</button>
+        <button type="button" class="btn btn-light">Light</button>
+        <button type="button" class="btn btn-dark">Dark</button>
+        <button type="button" class="btn btn-link">Link</button>
+    </div>
+
+    <div class="mb-2">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mb-2 row">
+        <div class="col-6 text-center">
+            <img src="https://placeholder.netslum.de/image/400x300/?1" class="img-fluid rounded">
+        </div>
+        <div class="col-6 text-center">
+            <img src="https://placeholder.netslum.de/image/400x300/?2" class="img-fluid rounded">
+        </div>
+    </div>
+
+    <div class="mb-2 row">
+        {{< highlight go >}}
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, World!")
+}
+{{< / highlight >}}
+    </div>
+
+    <div class="mb-2 row">
+        {{< highlight go >}}
+$ hugo --verbose
+INFO: 2014/09/29 Using config file: ~/Sites/config.toml
+# Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+{{< / highlight >}}
+    </div>
+
+    <div class="mb-2 row">
+        <form>
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+
+            <div class="custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Check this custom checkbox</label>
+            </div>
+
+            <div class="custom-radio">
+                <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+            </div>
+            <div class="custom-radio">
+                <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+            </div>
+        </form>
+    </div>
+</section>

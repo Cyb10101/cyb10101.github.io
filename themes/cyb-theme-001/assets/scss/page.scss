@@ -1,0 +1,67 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    color: val($palette, text);
+    background: val($palette, background);
+
+    // Stops initial animations until page loads or stops resizing
+    &.is-preload,
+    &.is-resizing {
+        *, *:before, *:after {
+            animation: none !important;
+            transition: none !important;
+        }
+    }
+}
+
+#wrapper {
+    display: flex;
+    min-height: 100vh;
+
+    #main {
+        flex-grow: 1;
+        flex-shrink: 1;
+        width: 100%;
+
+        padding: 0 2em;
+        margin: 0 auto;
+        max-width: 110em;
+
+
+        > section {
+            padding: 1em 0;
+            border-top: solid 2px _palette(border);
+
+            &:first-of-type {
+                border-top: 0;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    #wrapper {
+        #main {
+            padding: 0 5em;
+
+            > section {
+                padding: 3em 0;
+            }
+        }
+    }
+}
+
+.highlight {
+    max-width: 100%;
+
+    pre {
+        padding: 5px;
+        border-radius: 4px;
+    }
+}

@@ -1,0 +1,25 @@
+.navigation-vertical {
+    .nav-link {
+        color: palette(text);
+
+        .fa-angle-down {
+            float: right;
+            font-size: 22px;
+
+            transform: rotateX(180deg);
+            transition: transform 300ms linear;
+        }
+
+        &.collapsed .fa-angle-down {
+            transform: rotateX(0deg);
+        }
+        &.active {
+            background-color: #e8e8e8;
+            border-left: 4px solid palette(accent);
+            padding-left: calc(1rem - 4px);
+        }
+    }
+    .nav-item {
+        list-style: none;
+    }
+}

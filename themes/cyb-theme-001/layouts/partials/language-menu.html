@@ -1,0 +1,14 @@
+{{ if and .Site.IsMultiLingual $.Translations }}
+<li class="language-menu">
+    <div><i class="fas fa-language"></i> {{ i18n "Language" }} <i class="fas fa-angle-down"></i></div>
+    <ul>
+        {{ range $.Translations }}
+        <li>
+            <a href="{{ .Permalink | relURL }}" title="{{ .Language.LanguageName }}">
+                {{ .Language.LanguageName }}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</li>
+{{ end }}

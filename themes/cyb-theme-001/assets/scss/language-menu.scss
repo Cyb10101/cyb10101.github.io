@@ -1,0 +1,57 @@
+.language-menu {
+    position: relative;
+    display: inline-block;
+    text-align: left;
+    @include user-select(none);
+
+    > div {
+        padding: 0;
+        line-height: 26px;
+        cursor: pointer;
+
+        .fa-language {
+            font-size: 26px;
+            vertical-align: bottom;
+        }
+    }
+
+    > ul {
+        display: block;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        z-index: 1;
+        visibility: hidden;
+        transition: visibility 0s 400ms;
+
+        li {
+            display: block !important;
+            margin: 0;
+            padding: 0 !important;
+        }
+
+        a {
+            display: block;
+            color: palette(text);
+            padding: 12px 16px;
+            text-decoration: none;
+        }
+    }
+
+    &:hover {
+        > div {
+            color: black;
+
+            .fa-language {
+                color: $link-color;
+            }
+        }
+
+        > ul {
+            visibility: visible;
+        }
+    }
+}

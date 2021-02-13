@@ -1,0 +1,23 @@
+{{ define "title" }}
+  {{ .Title }} | {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+<section class="container-fluid page">
+    <article>
+        <header>
+            <h1 class="title">
+                <a class="title-link" href="{{ .Permalink | safeURL }}">{{ .Title }}</a>
+            </h1>
+        </header>
+
+        {{ .Content }}
+
+        {{/* @todo reading time
+        {{ if (or (eq (.Param "show_reading_time") true) (eq $section.Params.show_reading_time true) )}}
+        <span class="f6 mv4 dib tracked"> - {{ .ReadingTime}} minutes read</span>
+        <span class="f6 mv4 dib tracked"> - {{ .WordCount}} words</span>
+        {{ end }}
+        */}}
+    </article>
+</section>
+{{ end }}

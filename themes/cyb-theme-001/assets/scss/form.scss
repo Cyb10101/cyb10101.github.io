@@ -1,0 +1,70 @@
+$palette: (
+    custom-input-fg: #7f888f,
+    custom-input-fg-light: #9fa3a6,
+);
+
+.custom-checkbox input[type="checkbox"],
+.custom-radio input[type="radio"], {
+    appearance: none;
+
+    & + label {
+        @include iconFontAwesome(false, solid);
+        color: palette(custom-input-fg);
+        cursor: pointer;
+        display: inline-block;
+        font-size: 1em;
+        font-weight: 400;
+        padding-left: 1.65em;
+        padding-right: 0.75em;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: inline-block;
+            width: 1.7em;
+            height: 1.7em;
+            line-height: 1.7em;
+            font-size: 0.8em;
+            text-align: center;
+
+            background: #ffffff;
+            border-radius: 0.375em;
+            border: solid 1px palette(border);
+        }
+    }
+
+    &:checked + label {
+        &:before {
+            background-color: palette(accent-light);
+            border-color: palette(accent-light);
+            color: #ffffff;
+            content: '\f00c';
+        }
+    }
+
+    &:focus + label {
+        &:before {
+            border-color: palette(accent-light);
+            box-shadow: 0 0 0 1px palette(accent-light);
+        }
+    }
+}
+
+.custom-checkbox input[type="checkbox"] {
+    & + label {
+        &:before {
+            border-radius: 0.375em;
+        }
+    }
+}
+
+.custom-radio input[type="radio"] {
+    & + label {
+        &:before {
+            border-radius: 100%;
+        }
+    }
+}
