@@ -26,7 +26,7 @@ startFunction() {
             --buildDrafts --buildExpired --buildFuture --cleanDestinationDir --disableFastRender --i18n-warnings
         ;;
         build)
-            /usr/local/bin/hugo --cleanDestinationDir --i18n-warnings --destination docs
+            /usr/local/bin/hugo --cleanDestinationDir --i18n-warnings
         ;;
         version)
             /usr/local/bin/hugo version
