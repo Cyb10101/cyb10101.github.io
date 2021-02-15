@@ -2,7 +2,7 @@
 title: "Games"
 description: "Games"
 date: 2021-02-12T14:58:51+01:00
-draft: true
+draft: false
 menu:
     main:
         identifier: "games"
