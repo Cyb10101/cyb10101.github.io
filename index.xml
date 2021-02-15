@@ -17,13 +17,13 @@
     </item>
     
     <item>
-      <title>Open the lever / binary chest in Torghast</title>
+      <title>Open the lever chest in Torghast</title>
       <link>https://cyb10101.github.io/games/world-of-warcraft/open-lever-chest/</link>
       <pubDate>Fri, 12 Feb 2021 14:58:51 +0100</pubDate>
       
       <guid>https://cyb10101.github.io/games/world-of-warcraft/open-lever-chest/</guid>
-      <description>In the game World of Warcraft there is a lever / binary chest in the dungeon Torghast.
- To open the chest, you have to go through all possible combinations and one combination opens the box. The 0 for lever is down and the 1 for lever is up.  0000000100100011 0100010101100111 1000100110101011 1100110111101111   Too difficult to remember?  It is easier with this memory aid: 1, Again more precisely: 1, 1,</description>
+      <description>In the game World of Warcraft there is a lever chest in the dungeon Torghast.
+ To open the chest, you have to go through all possible combinations and one combination opens the box. The 0 for lever is down and the 1 for lever is up.  Simply put, you have to go through all of the binary codes:  0000000100100011 0100010101100111 1000100110101011 1100110111101111   Too difficult to remember?</description>
     </item>
     
   </channel>

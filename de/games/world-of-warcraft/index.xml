@@ -8,13 +8,13 @@
     <language>en</language>
     <lastBuildDate>Fri, 12 Feb 2021 14:58:51 +0100</lastBuildDate><atom:link href="https://cyb10101.github.io/de/games/world-of-warcraft/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hebel / binäre Truhe in Torghast öffnen</title>
+      <title>Hebel Truhe in Torghast öffnen</title>
       <link>https://cyb10101.github.io/de/games/world-of-warcraft/open-lever-chest/</link>
       <pubDate>Fri, 12 Feb 2021 14:58:51 +0100</pubDate>
       
       <guid>https://cyb10101.github.io/de/games/world-of-warcraft/open-lever-chest/</guid>
-      <description>Im Spiel World of Warcraft gibt es im Dungeon Torghast eine hebel / binäre Truhe.
- Um die Truhe zu öffnen, müsst ihr alle möglichen Kombinationen durchgehen und eine Kombination öffnet die Kiste. Die 0 für Hebel ist unten und die 1 für der Hebel ist oben.  0000000100100011 0100010101100111 1000100110101011 1100110111101111   Zu schwierig zu merken?  Es geht mit dieser Merkhilfe einfacher: 1, Nochmals genauer: 1, 1,</description>
+      <description>Im Spiel World of Warcraft gibt es im Dungeon Torghast eine hebel Truhe.
+ Um die Truhe zu öffnen, müsst ihr alle möglichen Kombinationen durchgehen und eine Kombination öffnet die Kiste. Die 0 für Hebel ist unten und die 1 für der Hebel ist oben.  Ganz einfach ausgedrückt, müsst ihr alle binär Codes durchgehen:  0000000100100011 0100010101100111 1000100110101011 1100110111101111   Zu schwierig zu merken?  Es geht mit dieser Merkhilfe einfacher: 1, Nochmals genauer: 1, 1,</description>
     </item>
     
   </channel>
