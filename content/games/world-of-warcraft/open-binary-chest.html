@@ -9,7 +9,75 @@ menu:
         parent: "world-of-warcraft"
 ---
 
+<div class="row">
+    <div class="col-12">
+        <p>In the game World of Warcraft there is a binary chest in the dungeon Torghast.</p>
 
-<p>In the game World of Warcraft there is a binary chest in the dungeon Torghast.</p>
+        <p>
+            To open the chest, you have to go through all possible combinations and one combination opens the box.
+            The 0 for lever is down and the 1 for lever is up.
+        </p>
 
-<p>You can open it as follows: >1, <2, >1, <2</p>
+        <table class="table table-striped">
+            <tbody>
+            <tr><td>0000</td><td>0001</td><td>0010</td><td>0011</td></tr>
+            <tr><td>0100</td><td>0101</td><td>0110</td><td>0111</td></tr>
+            <tr><td>1000</td><td>1001</td><td>1010</td><td>1011</td></tr>
+            <tr><td>1100</td><td>1101</td><td>1110</td><td>1111</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Too difficult to remember?</h3>
+        <p>
+            It is easier with this memory aid: <b>>1, <2, repeat once</b><br>
+            Again more precisely: <b>>1, <2, >1, <2</b><br>
+        </p>
+
+        <p>
+            Um, please ?! Very easily:<br>
+            The numbers (1 & 2) are the respective switches.
+            It doesn't matter which switch you choose, you just have to remember the position.
+            The brackets (< & >) are very important for the process and are placed on two switches.
+        </p>
+
+        <p>
+            In theory, this should even be possible across the board with all switch combinations.
+        </p>
+    </div>
+
+    <div class="col-12">
+        <h3>Example of a sequence</h3>
+        <p>
+            The memory aid a little different: <b>>3, <4, (>3, <4)</b><br>
+        </p>
+        <ul>
+            <li>The numbers 3 and 4 stand for switches 3 and 4, respectively.</li>
+            <li>That means the bracket is on switches 1 and 2.</li>
+            <li>Each point in the bracket is a click.</li>
+        </ul>
+        <p>
+            Deciphered this means:<br>
+        </p>
+        <ol>
+            <li>From the first bracket "<b>></b>", the switch sequence becomes: <b>121</b></li>
+            <li>From <b>3</b>, becomes the switch <b>3</b></li>
+            <li>From the second bracket "<b><</b>", the switch sequence becomes: <b>212</b></li>
+            <li>From <b>4</b>, becomes the switch <b>4</b></li>
+            <li>Repeat once and all sequences are through</li>
+        </ol>
+        <p>
+            Das ist dann die Schalter Reihenfolge: <b>121 3, 212 4, 121 3, 212 4</b>
+        </p>
+    </div>
+    <div class="col-12 col-md-6 mb-3">
+        <img src="/images/games/world-of-warcraft/binary-chest_sequenz1.png" class="img-fluid rounded">
+    </div>
+    <div class="col-12 col-md-6 mb-3">
+        <img src="/images/games/world-of-warcraft/binary-chest_sequenz2.png" class="img-fluid rounded">
+    </div>
+
+    <div class="col-12 mb-3">
+        <h3>Sequenz Beispiel als Video</h3>
+        {{< youtube id="9Y5qdV-B4BY" autoplay="false" >}}
+    </div>
+</div>

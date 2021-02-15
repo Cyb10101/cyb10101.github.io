@@ -1,4 +1,8 @@
 /node_modules
 /resources
+/static/images/games/world-of-warcraft/binary-chest.mkv
+/static/images/games/world-of-warcraft/binary-chest_original.png
+/static/images/games/world-of-warcraft/binary-chest_sequenz1.xcf
+/static/images/games/world-of-warcraft/binary-chest_sequenz2.xcf
 /.idea
 /.env

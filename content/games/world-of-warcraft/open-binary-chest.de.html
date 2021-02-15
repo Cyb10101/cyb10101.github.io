@@ -1,6 +1,6 @@
 ---
-title: "Die binäre Truhe in Torghast öffnen"
-description: "Open binary chest"
+title: "Binäre Truhe in Torghast öffnen"
+description: "Die binäre Truhe in Torghast öffnen"
 keywords: wow,torghast,binary,chest,world,warcraft
 date: 2021-02-12T14:58:51+01:00
 draft: true
@@ -14,8 +14,7 @@ menu:
         <p>Im Spiel World of Warcraft gibt es im Dungeon Torghast eine binäre Truhe.</p>
 
         <p>
-            Der Mechanismus ist ganz einfach.
-            Ihr müsst dazu alle möglichen Kombinationen durchgehen und bei einer Kombination öffnet sich die Kiste.
+            Um die Truhe zu öffnen, müsst ihr alle möglichen Kombinationen durchgehen und eine Kombination öffnet die Kiste.
             Die 0 für Hebel ist unten und die 1 für der Hebel ist oben.
         </p>
 
@@ -30,19 +29,55 @@ menu:
 
         <h3>Zu schwierig zu merken?</h3>
         <p>
-            Es geht mit dieser Merkhilfe einfacher: <b>>1, <2, >1, <2</b>
+            Es geht mit dieser Merkhilfe einfacher: <b>>1, <2, wiederhole einmal</b><br>
+            Nochmals genauer: <b>>1, <2, >1, <2</b><br>
         </p>
 
         <p>
-            Wie bitte? Nochmals genauer: <b>121 3, 212 4, 121 3, 212 4</b>
+            Ähm wie bitte?! Ganz einfach:<br>
+            Die Nummern (1 & 2) sind die jeweiligen Schalter.
+            Dabei ist es egal welchen Schalter ihr wählt, ihr müsst euch nur die Stelle merken.
+            Die Klammern (< & >) is für den Ablauf ganz wichtig und werden auf zwei Schaltern gelegt.
         </p>
 
         <p>
-            Alles was ihr tun müsst ist 2 Kombinationen merken und die Reihenfolge beibehalten.
-            Es ist sogar völlig egal wie oder wo ihr beginnt. Hauptsache die Sequenz stimmt.
+            Theoretisch sollte das sogar quer durch, mit allen Schalter-Kombinationen möglich sein.
         </p>
     </div>
 
-    <div class="col-6">
+    <div class="col-12">
+        <h3>Beispiel einer Sequenz</h3>
+        <p>
+            Die Merkhilfe etwas anders: <b>>3, <4, (>3, <4)</b><br>
+        </p>
+        <ul>
+            <li>Die Nummer 3 und 4 steht für die jeweiligen Schalter 3 und 4.</li>
+            <li>Das heißt die Klammer liegt auf Schalter 1 und 2.</li>
+            <li>Jeder Punkt der Klammer ist ein Klick.</li>
+        </ul>
+        <p>
+            Entschlüsselt bedeutet das:<br>
+        </p>
+        <ol>
+            <li>Aus der ersten Klammer "<b>></b>", wird die Schalter Reihenfolge: <b>121</b></li>
+            <li>Aus <b>3</b>, wird der Schalter <b>3</b></li>
+            <li>Aus der zweiten Klammer "<b><</b>", wird die Schalter Reihenfolge: <b>212</b></li>
+            <li>Aus <b>4</b>, wird der Schalter <b>4</b></li>
+            <li>Einmal wiederholen und alle Sequenzen sind durch</li>
+        </ol>
+        <p>
+            That is the switch order: <b>121 3, 212 4, 121 3, 212 4</b>
+        </p>
+    </div>
+    <div class="col-12 col-md-6 mb-3">
+        <img src="/images/games/world-of-warcraft/binary-chest_sequenz1.png" class="img-fluid rounded">
+    </div>
+    <div class="col-12 col-md-6 mb-3">
+        <img src="/images/games/world-of-warcraft/binary-chest_sequenz2.png" class="img-fluid rounded">
+    </div>
+
+    <div class="col-12 mb-3">
+        <h3>Sequence example as video</h3>
+        {{< youtube id="9Y5qdV-B4BY" autoplay="false" >}}
     </div>
 </div>
