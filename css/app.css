@@ -11981,7 +11981,7 @@ body {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
     visibility: hidden;
-    transition: visibility 0s 400ms; }
+    transition: visibility 0s 200ms; }
     .language-menu > ul li {
       display: block !important;
       margin: 0;

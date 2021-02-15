@@ -21,6 +21,7 @@
   
   <url>
     <loc>https://cyb10101.github.io/</loc>
+    <lastmod>2021-02-12T14:58:51+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -32,6 +33,57 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://cyb10101.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cyb10101.github.io/games/</loc>
+    <lastmod>2021-02-12T14:58:51+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cyb10101.github.io/de/games/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cyb10101.github.io/games/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cyb10101.github.io/games/world-of-warcraft/open-binary-chest/</loc>
+    <lastmod>2021-02-12T14:58:51+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cyb10101.github.io/de/games/world-of-warcraft/open-binary-chest/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cyb10101.github.io/games/world-of-warcraft/open-binary-chest/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cyb10101.github.io/games/world-of-warcraft/</loc>
+    <lastmod>2021-02-12T14:58:51+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cyb10101.github.io/de/games/world-of-warcraft/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cyb10101.github.io/games/world-of-warcraft/"
                 />
   </url>
   

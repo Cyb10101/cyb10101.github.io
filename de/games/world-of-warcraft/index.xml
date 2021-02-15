@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cyb10101</title>
-    <link>https://cyb10101.github.io/de/</link>
-    <description>Recent content on Cyb10101</description>
+    <title>World of Warcaft on Cyb10101</title>
+    <link>https://cyb10101.github.io/de/games/world-of-warcraft/</link>
+    <description>Recent content in World of Warcaft on Cyb10101</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 12 Feb 2021 14:58:51 +0100</lastBuildDate><atom:link href="https://cyb10101.github.io/de/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Feb 2021 14:58:51 +0100</lastBuildDate><atom:link href="https://cyb10101.github.io/de/games/world-of-warcraft/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Binäre Truhe in Torghast öffnen</title>
       <link>https://cyb10101.github.io/de/games/world-of-warcraft/open-binary-chest/</link>
@@ -15,15 +15,6 @@
       <guid>https://cyb10101.github.io/de/games/world-of-warcraft/open-binary-chest/</guid>
       <description>Im Spiel World of Warcraft gibt es im Dungeon Torghast eine binäre Truhe.
  Um die Truhe zu öffnen, müsst ihr alle möglichen Kombinationen durchgehen und eine Kombination öffnet die Kiste. Die 0 für Hebel ist unten und die 1 für der Hebel ist oben.  0000000100100011 0100010101100111 1000100110101011 1100110111101111   Zu schwierig zu merken?  Es geht mit dieser Merkhilfe einfacher: 1, Nochmals genauer: 1, 1,</description>
-    </item>
-    
-    <item>
-      <title>Über</title>
-      <link>https://cyb10101.github.io/de/about/</link>
-      <pubDate>Fri, 12 Feb 2021 14:58:51 +0100</pubDate>
-      
-      <guid>https://cyb10101.github.io/de/about/</guid>
-      <description>Über</description>
     </item>
     
   </channel>
