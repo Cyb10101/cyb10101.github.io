@@ -3,7 +3,6 @@
 /resources
 /static/images/games/world-of-warcraft/lever-chest.mkv
 /static/images/games/world-of-warcraft/lever-chest_original.png
-/static/images/games/world-of-warcraft/lever-chest_sequenz1.xcf
-/static/images/games/world-of-warcraft/lever-chest_sequenz2.xcf
+/static/images/games/world-of-warcraft/lever-chest_sequence*.xcf
 /.idea
 /.env
