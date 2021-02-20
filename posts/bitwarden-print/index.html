@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="de">
+    <meta http-equiv="Content-Language" content="en">
 
     <meta name="author" content="Cyb10101">
-    <meta name="description" content="Konvertiert einen Export von Bitwarden in eine PDF Datei zum ausdrucken">
-    <meta name="keywords" content="bitwarden,pdf">
+    <meta name="description" content="Converts an export from Bitwarden to a printable document">
+    <meta name="keywords" content="bitwarden,pdf,json">
 
     
 
     <title>
-    Bitwarden JSON zu PDF | Cyb10101
+    Bitwarden to printer | Cyb10101
 </title>
 
-    <link rel="canonical" href="https://cyb10101.github.io/de/posts/bitwarden-to-pdf/">
+    <link rel="canonical" href="https://cyb10101.github.io/posts/bitwarden-print/">
 
     
 
@@ -55,7 +55,7 @@
         
             <li class="nav-item">
             
-                <a href="/de/posts/" class="nav-link">
+                <a href="/posts/" class="nav-link active">
                     <i class="far fa-sticky-note mr-3 text-primary fa-fw"></i>
                     Blog
                     
@@ -74,7 +74,7 @@
                 <ul class="collapse" id="nav-vertical-games">
                     
                     <li class="nav-item">
-                        <a href="/de/games/world-of-warcraft/" class="nav-link">
+                        <a href="/games/world-of-warcraft/" class="nav-link">
                             <i class="far fa-sticky-note mr-3 text-primary fa-fw"></i>
                             World of Warcaft
                             
@@ -87,9 +87,9 @@
         
             <li class="nav-item">
             
-                <a href="/de/about/" class="nav-link">
+                <a href="/about/" class="nav-link">
                     <i class="far fa-sticky-note mr-3 text-primary fa-fw"></i>
-                    Über
+                    About
                     
                 </a>
             
@@ -122,12 +122,12 @@
                     <li><a href="#" id="dark-mode-toggle" title="Toogle dark mode"><i class="fas fa-moon"></i></a></li>
                     
 <li class="language-menu">
-    <div><i class="fas fa-language"></i> Sprache <i class="fas fa-angle-down"></i></div>
+    <div><i class="fas fa-language"></i> Language <i class="fas fa-angle-down"></i></div>
     <ul>
         
         <li>
-            <a href="/posts/bitwarden-to-pdf/" title="English">
-                English
+            <a href="/de/posts/bitwarden-print/" title="Deutsch">
+                Deutsch
             </a>
         </li>
         
@@ -146,8 +146,8 @@
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://cyb10101.github.io/de/posts/bitwarden-to-pdf/">
-              Bitwarden JSON zu PDF
+            <a class="title-link" href="https://cyb10101.github.io/posts/bitwarden-print/">
+              Bitwarden to printer
             </a>
           </h1>
         </div>
@@ -161,7 +161,7 @@
             </span>
             <span class="reading-time">
               <i class="fa fa-clock-o" aria-hidden="true"></i>
-              3 Minuten Lesezeit
+              3-minute read
             </span>
           </div>
           
@@ -174,7 +174,7 @@
         <hr>
         
         
-<p>Konvertiert einen JSON Export von Bitwarden in eine PDF Datei zum ausdrucken.</p>
+<p>Converts a JSON export from Bitwarden into a printable document.</p>
 
 <form name="bitwardenToPdf" id="bitwardenToPdf" action="" onsubmit="return false;">
     <div class="form-group">
@@ -185,14 +185,14 @@
         This is a danger alert—check it out!
     </div>
     <input type="reset" class="btn btn-danger" id="reset">
-    <button type="button" class="btn btn-primary" id="convert">In PDF konvertieren</button>
+    <button type="button" class="btn btn-primary" id="convert">Print</button>
 </form>
 
 <script>
     class BitwardenToPdf {
         constructor() {
-            this.title = 'Passwörter';
-            this.columns = ['Titel', 'Benutzer', 'Passwort', 'URL'];
+            this.title = 'Passwords';
+            this.columns = ['Title', 'Username', 'Password', 'URL'];
             this.form = document.getElementById('bitwardenToPdf');
             let instance = this;
 
