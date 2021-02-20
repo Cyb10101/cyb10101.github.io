@@ -9,6 +9,6 @@ menu:
         parent: "games"
 ---
 
-{{< markdown/button-back url="../" class="mb-2">}}
+{{< markdown/button url="games" class="btn-primary mb-2">}}
 <i class="fas fa-arrow-left"></i> Zurück zu Spiele
-{{< /markdown/button-back >}}
+{{< /markdown/button >}}
