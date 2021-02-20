@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="de">
+
+    <meta name="author" content="Cyb10101">
+    <meta name="description" content="Konvertiert einen Export von Bitwarden in eine PDF Datei zum ausdrucken">
+    <meta name="keywords" content="bitwarden,pdf">
+
+    
+
+    <title>
+    Bitwarden JSON zu PDF | Cyb10101
+</title>
+
+    <link rel="canonical" href="https://cyb10101.github.io/de/posts/bitwarden-to-pdf/">
+
+    
+
+    
+        
+        <link rel="stylesheet" href="/css/app.css" media="screen">
+    
+
+    
+
+    
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon.ico">
+
+    <meta name="generator" content="Hugo 0.80.0" />
+</head>
+
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="sidebar">
+    <div class="inner">
+        <div>
+    <h3>Navigation</h3>
+    <ul class="navigation-vertical nav flex-column mb-0">
+        
+        <li class="nav-item">
+            <a href="/" class="nav-link">
+                <i class="fas fa-home mr-3 text-primary fa-fw"></i> Home
+            </a>
+        </li>
+
+        
+
+        
+            <li class="nav-item">
+            
+                <a href="/de/posts/" class="nav-link">
+                    <i class="far fa-sticky-note mr-3 text-primary fa-fw"></i>
+                    Blog
+                    
+                </a>
+            
+            </li>
+        
+            <li class="nav-item">
+            
+                <a href="#nav-vertical-games" class="nav-link collapsed" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fas fa-list mr-3 text-primary fa-fw"></i>
+                    Games
+                    
+                    <i class="fas fa-angle-down"></i>
+                </a>
+                <ul class="collapse" id="nav-vertical-games">
+                    
+                    <li class="nav-item">
+                        <a href="/de/games/world-of-warcraft/" class="nav-link">
+                            <i class="far fa-sticky-note mr-3 text-primary fa-fw"></i>
+                            World of Warcaft
+                            
+                        </a>
+                    </li>
+                    
+                </ul>
+            
+            </li>
+        
+            <li class="nav-item">
+            
+                <a href="/de/about/" class="nav-link">
+                    <i class="far fa-sticky-note mr-3 text-primary fa-fw"></i>
+                    Über
+                    
+                </a>
+            
+            </li>
+        
+    </ul>
+</div>
+
+
+        
+    </div>
+</div>
+
+        <div id="main">
+            <header id="header">
+                <a href="/" class="logo">
+                    
+                    <img src="/images/avatar_500_hu69fcab73b70b704c1d270a5b050ebce1_194324_30x0_resize_q100_box_2.png">
+                    Cyb10101
+                </a>
+                <ul class="icons">
+                    
+                        
+                            <li><a href="https://github.com/Cyb10101/" title="Github" target="_blank"><i class="fab fa-github fa-fw"></i></a></li>
+                        
+                            <li><a href="/index.xml" title="RSS" target="_blank"><i class="fas fa-rss fa-fw"></i></a></li>
+                        
+                    
+
+                    <li><a href="#" id="dark-mode-toggle" title="Toogle dark mode"><i class="fas fa-moon"></i></a></li>
+                    
+<li class="language-menu">
+    <div><i class="fas fa-language"></i> Sprache <i class="fas fa-angle-down"></i></div>
+    <ul>
+        
+        <li>
+            <a href="/posts/bitwarden-to-pdf/" title="English">
+                English
+            </a>
+        </li>
+        
+    </ul>
+</li>
+
+
+                </ul>
+            </header>
+
+            
+
+            
+  <section class="container-fluid post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://cyb10101.github.io/de/posts/bitwarden-to-pdf/">
+              Bitwarden JSON zu PDF
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime='2021-02-18T17:58:26&#43;01:00'>
+                2021-02-18
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3 Minuten Lesezeit
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div>
+        <hr>
+        
+        
+<p>Konvertiert einen JSON Export von Bitwarden in eine PDF Datei zum ausdrucken.</p>
+
+<form name="bitwardenToPdf" id="bitwardenToPdf" action="" onsubmit="return false;">
+    <div class="form-group">
+        <label for="bitwardenToPdf_json">Bitwarden JSON:</label>
+        <textarea class="form-control" name="json" id="bitwardenToPdf_json" cols="30" rows="10"></textarea>
+    </div>
+    <div class="alert alert-danger" role="alert" style="display: none;">
+        This is a danger alert—check it out!
+    </div>
+    <input type="reset" class="btn btn-danger" id="reset">
+    <button type="button" class="btn btn-primary" id="convert">In PDF konvertieren</button>
+</form>
+
+<script>
+    class BitwardenToPdf {
+        constructor() {
+            this.title = 'Passwörter';
+            this.columns = ['Titel', 'Benutzer', 'Passwort', 'URL'];
+            this.form = document.getElementById('bitwardenToPdf');
+            let instance = this;
+
+            document.getElementById('convert').addEventListener('click', function() {
+                instance.convert();
+            });
+        }
+
+        convert() {
+            this.setAlert();
+            try {
+                let code = this.form.bitwardenToPdf_json.value;
+                code = JSON.parse(code);
+                this.printContent(this.convertJsonToHTML(code));
+            } catch (exception) {
+                this.setAlert(exception);
+            }
+        }
+
+        setAlert(message) {
+            let alert = this.form.querySelector('.alert');
+            let show = (message && message !== '');
+            alert.innerHTML = show ? '<b>Error</b><br>' + message : '';
+            alert.style.display = show ? 'block' : 'none';
+        }
+
+        convertJsonToHTML(passwords) {
+            let content = '';
+
+            let count = 0;
+            passwords.items.forEach(item => {
+                let trClass = (count % 2 ? 'odd' : 'even')
+                content += '<tr class="' + trClass + '"><td>' + item.name + '</td>';
+                content += '<td>' + (item.login && item.login.username ? item.login.username : '') + '</td>';
+                content += '<td>' + (item.login && item.login.password ? item.login.password : '') + '</td>';
+
+                content += '<td>';
+                if (item.login && item.login.uris) {
+                    item.login.uris.forEach(uri => {
+                        content += (uri.uri ? uri.uri : '') + '<br>';
+                    });
+                }
+                content += '</td></tr>';
+
+                let extras = '';
+
+                if (item.login && item.login.totp) {
+                    extras += (extras !== '' ? '<br><br>' : '');
+                    extras += '<b>TOTP:</b> ' + item.login.totp;
+                }
+
+                if (item.fields) {
+                    extras += (extras !== '' ? '<br><br>' : '');
+                    extras += '<b>Felder:</b>';
+                    item.fields.forEach(field => {
+                        extras += '<br>' + field.name + ': ' + field.value;
+                    });
+                }
+
+                if (item.notes) {
+                    let notes = item.notes.replace(/(?:\r\n|\r|\n)/g, '<br>');
+                    notes = notes.replace(/^(\s|<br>)*(.*?)(\s|<br>)*$/, '$2'); // Trim new line
+                    extras += (extras !== '' ? '<br><br>' : '');
+                    extras += '<b>Notizen:</b><br>' + notes;
+                }
+
+                if (extras !== '') {
+                    content += '<tr class="' + trClass + '"><td>&nbsp;</td><td colspan="3">' + extras + '</td></tr>';
+                }
+
+                count++;
+            });
+            if (content !== '') {
+                content = '<tbody>' + content + '</tbody>';
+            }
+
+            return '<table id="table" class="table table-striped">'
+                + '<thead><tr><th>' + this.columns.join('</th><th>') + '</th></tr></thead>'
+                + content + '</table>';
+        }
+
+        getStyleElement() {
+            let css = 'body {margin: 0px;font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif; font-size: 1rem; font-weight: 400; line-height: 1.5; color: #212529; text-align: left;}'
+                + 'a {color: #007bff; text-decoration: none; background-color: transparent;}'
+                + 'a:hover {color: #0056b3; text-decoration: underline;}'
+
+                + 'table {width: 100%; margin-bottom: 1rem; color: #212529; border-collapse: collapse;}'
+                + 'table thead th {text-align: left; vertical-align: bottom; border-bottom: 2px solid #dee2e6;}'
+                + 'table td, table th {padding: .25rem; vertical-align: top; border-top: 1px solid #dee2e6;}'
+
+                + 'table tr {height: 100%;}'
+                + 'table td {padding: .25rem; height: calc(100% - .75rem);}'
+
+                + 'table tbody tr.even {background-color: rgba(0,0,0,.05);}'
+                + '@media print {'
+                + 'tr td, tr {page-break-inside: avoid;}'
+                + '@page {size: landscape;}'
+                + '}';
+
+            let style = document.createElement('style');
+            style.type = 'text/css';
+            if (style.styleSheet){
+                // This is required for IE8 and below.
+                style.styleSheet.cssText = css;
+            } else {
+                style.appendChild(document.createTextNode(css));
+            }
+            return style;
+        }
+
+        printContent(content) {
+            let windowPrint = window.open('', 'PRINT', 'width=1000,height=600');
+
+            windowPrint.document.write('<html><head><title>' + this.title + '</title>');
+            windowPrint.document.write(this.getStyleElement().outerHTML);
+            windowPrint.document.write('</head><body><div>');
+            windowPrint.document.write(content);
+            windowPrint.document.write('</div></body></html>');
+
+            windowPrint.document.close(); // necessary for IE >= 10
+            windowPrint.focus(); // necessary for IE >= 10
+
+            windowPrint.print();
+            windowPrint.close();
+            return true;
+        }
+    }
+    new BitwardenToPdf();
+</script>
+
+
+      </div>
+
+
+      <footer>
+        
+
+
+      </footer>
+    </article>
+  </section>
+
+
+            
+        </div>
+    </div>
+
+    
+        <script src="/js/app.js"></script>
+    
+</body></html>

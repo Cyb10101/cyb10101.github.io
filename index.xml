@@ -20,6 +20,16 @@ By the way, my personal favorite for sending files is the Croc program.</descrip
     </item>
     
     <item>
+      <title>Bitwarden JSON zu PDF</title>
+      <link>https://cyb10101.github.io/posts/bitwarden-to-pdf/</link>
+      <pubDate>Thu, 18 Feb 2021 17:58:26 +0100</pubDate>
+      
+      <guid>https://cyb10101.github.io/posts/bitwarden-to-pdf/</guid>
+      <description>Converts a JSON export from Bitwarden into a PDF file for printing.
+Bitwarden JSON:   This is a danger alert—check it out!  Convert to PDF   class BitwardenToPdf { constructor() { this.title = &#39;Passwords&#39;; this.columns = [&#39;Title&#39;, &#39;Username&#39;, &#39;Password&#39;, &#39;URL&#39;]; this.form = document.getElementById(&#39;bitwardenToPdf&#39;); let instance = this; document.getElementById(&#39;convert&#39;).addEventListener(&#39;click&#39;, function() { instance.convert(); }); } convert() { this.setAlert(); try { let code = this.form.bitwardenToPdf_json.value; code = JSON.parse(code); this.printContent(this.convertJsonToHTML(code)); } catch (exception) { this.</description>
+    </item>
+    
+    <item>
       <title>Password manager</title>
       <link>https://cyb10101.github.io/posts/password-manager/</link>
       <pubDate>Thu, 18 Feb 2021 17:57:26 +0100</pubDate>

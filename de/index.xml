@@ -20,6 +20,16 @@ Mein persönlicher Favorit um Dateien zu versenden, ist übrigends das Programm 
     </item>
     
     <item>
+      <title>Bitwarden JSON zu PDF</title>
+      <link>https://cyb10101.github.io/de/posts/bitwarden-to-pdf/</link>
+      <pubDate>Thu, 18 Feb 2021 17:58:26 +0100</pubDate>
+      
+      <guid>https://cyb10101.github.io/de/posts/bitwarden-to-pdf/</guid>
+      <description>Konvertiert einen JSON Export von Bitwarden in eine PDF Datei zum ausdrucken.
+Bitwarden JSON:   This is a danger alert—check it out!  In PDF konvertieren   class BitwardenToPdf { constructor() { this.title = &#39;Passwörter&#39;; this.columns = [&#39;Titel&#39;, &#39;Benutzer&#39;, &#39;Passwort&#39;, &#39;URL&#39;]; this.form = document.getElementById(&#39;bitwardenToPdf&#39;); let instance = this; document.getElementById(&#39;convert&#39;).addEventListener(&#39;click&#39;, function() { instance.convert(); }); } convert() { this.setAlert(); try { let code = this.form.bitwardenToPdf_json.value; code = JSON.parse(code); this.printContent(this.convertJsonToHTML(code)); } catch (exception) { this.</description>
+    </item>
+    
+    <item>
       <title>Passwort Manager</title>
       <link>https://cyb10101.github.io/de/posts/password-manager/</link>
       <pubDate>Thu, 18 Feb 2021 17:57:26 +0100</pubDate>
