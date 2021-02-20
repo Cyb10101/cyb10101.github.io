@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://cyb10101.github.io/de/</loc>
-    <lastmod>2021-02-12T14:58:51+01:00</lastmod>
+    <lastmod>2021-02-19T17:57:26+01:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link
@@ -16,6 +16,57 @@
                 rel="alternate"
                 hreflang="de"
                 href="https://cyb10101.github.io/de/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cyb10101.github.io/de/posts/file-sharing/</loc>
+    <lastmod>2021-02-19T17:57:26+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cyb10101.github.io/posts/file-sharing/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cyb10101.github.io/de/posts/file-sharing/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cyb10101.github.io/de/posts/password-manager/</loc>
+    <lastmod>2021-02-18T17:57:26+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cyb10101.github.io/posts/password-manager/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cyb10101.github.io/de/posts/password-manager/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://cyb10101.github.io/de/posts/</loc>
+    <lastmod>2021-02-12T14:58:51+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cyb10101.github.io/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cyb10101.github.io/de/posts/"
                 />
   </url>
   
