@@ -1,7 +1,7 @@
 ---
 title: "Password manager"
 description: "Password manager"
-keywords: file,sharing
+keywords: password,manager,bitwarden,lastpass,keepass
 date: 2021-02-18T17:57:26+01:00
 ---
 
