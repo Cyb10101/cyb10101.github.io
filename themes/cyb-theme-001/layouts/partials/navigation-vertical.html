@@ -43,7 +43,7 @@
         {{ range .Site.Menus.main }}
             <li class="nav-item">
             {{ if .HasChildren }}
-                <a href="#nav-vertical-{{ .Identifier }}" class="nav-link{{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }} active{{ else }} collapsed{{ end }}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a href="#nav-vertical-{{ .Identifier }}" class="nav-link{{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) (hasPrefix $currentPage.URL .URL) }} active{{ else }} collapsed{{ end }}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
                     {{ if .Pre }}{{ .Pre | safeHTML }}{{ else }}<i class="fas fa-list mr-3 text-primary fa-fw"></i>{{ end }}
                     {{ .Name }}
                     {{ .Post }}
@@ -52,7 +52,7 @@
                 <ul class="collapse{{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) }} show{{ end }}" id="nav-vertical-{{ .Identifier }}">
                     {{ range .Children }}
                     <li class="nav-item">
-                        <a href="{{ .URL | relLangURL }}" class="nav-link{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
+                        <a href="{{ .URL | relLangURL }}" class="nav-link{{ if or ($currentPage.IsMenuCurrent "main" .) (hasPrefix $currentPage.URL .URL) }} active{{ end }}">
                             {{ if .Pre }}{{ .Pre | safeHTML }}{{ else }}<i class="far fa-sticky-note mr-3 text-primary fa-fw"></i>{{ end }}
                             {{ .Name }}
                             {{ .Post }}
@@ -61,7 +61,7 @@
                     {{ end }}
                 </ul>
             {{ else }}
-                <a href="{{ .URL | relLangURL }}" class="nav-link{{ if $currentPage.IsMenuCurrent "main" . }} active{{ end }}">
+                <a href="{{ .URL | relLangURL }}" class="nav-link{{ if or ($currentPage.IsMenuCurrent "main" .) (hasPrefix $currentPage.URL .URL) }} active{{ end }}">
                     {{ if .Pre }}{{ .Pre | safeHTML }}{{ else }}<i class="far fa-sticky-note mr-3 text-primary fa-fw"></i>{{ end }}
                     {{ .Name }}
                     {{ .Post }}
