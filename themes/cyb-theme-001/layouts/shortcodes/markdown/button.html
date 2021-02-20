@@ -1,1 +1,1 @@
-<a href="{{ ref . (.Get "url") }}" class="btn {{ .Get "class" }}">{{ .Inner }}</a>
+<a href="{{ .Get "url" | relLangURL }}" class="btn {{ .Get "class" }}">{{ .Inner }}</a>
