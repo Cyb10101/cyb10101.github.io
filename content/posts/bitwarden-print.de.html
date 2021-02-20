@@ -1,11 +1,11 @@
 ---
-title: "Bitwarden JSON to PDF"
-description: "Converts an export from Bitwarden to a PDF file for printing"
+title: "Bitwarden zu Drucker"
+description: "Konvertiert einen Export von Bitwarden in ein druckbares Dokument"
 keywords: bitwarden,pdf
 date: 2021-02-18T17:58:26+01:00
 ---
 
-<p>Converts a JSON export from Bitwarden into a PDF file for printing.</p>
+<p>Konvertiert einen JSON Export von Bitwarden in ein druckbares Dokument.</p>
 
 <form name="bitwardenToPdf" id="bitwardenToPdf" action="" onsubmit="return false;">
     <div class="form-group">
@@ -16,14 +16,14 @@ date: 2021-02-18T17:58:26+01:00
         This is a danger alert—check it out!
     </div>
     <input type="reset" class="btn btn-danger" id="reset">
-    <button type="button" class="btn btn-primary" id="convert">Convert to PDF</button>
+    <button type="button" class="btn btn-primary" id="convert">Drucken</button>
 </form>
 
 <script>
     class BitwardenToPdf {
         constructor() {
-            this.title = 'Passwords';
-            this.columns = ['Title', 'Username', 'Password', 'URL'];
+            this.title = 'Passwörter';
+            this.columns = ['Titel', 'Benutzer', 'Passwort', 'URL'];
             this.form = document.getElementById('bitwardenToPdf');
             let instance = this;
 

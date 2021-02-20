@@ -80,8 +80,8 @@ Ich benutze Passwort Manager seit über 20 Jahren und habe nie ein Passwort ausd
 Falls das jemand machen will, habe ich für Bitwarden ein Script gemacht, damit das hübsch aussieht.
 Lastpass kann es auch, sieht halt scheiße aus.
 
-{{< markdown/button url="posts/bitwarden-to-pdf" class="btn-primary mb-2">}}
-<i class="fas fa-arrow-right"></i> Konvertiere Bitwarten JSON zu PDF
+{{< markdown/button url="posts/bitwarden-print" class="btn-primary mb-2">}}
+<i class="fas fa-arrow-right"></i> Konvertiere Bitwarten zu einem druckbaren Dokument
 {{< /markdown/button >}}
 
 Für was ihr euch am Ende entscheidet ist eure Wahl. Schließlich müsst ihr damit umgehen.

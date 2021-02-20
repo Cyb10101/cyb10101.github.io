@@ -80,8 +80,8 @@ I've been using Password Manager for over 20 years and have never had to print o
 If anyone wants to do that, I made a script for Bitwarden to make it look nice.
 Lastpass can do it too, it just looks like shit.
 
-{{< markdown/button url="posts/bitwarden-to-pdf" class="btn-primary mb-2">}}
-<i class="fas fa-arrow-right"></i> Convert Bitwarten JSON to PDF
+{{< markdown/button url="posts/bitwarden-print" class="btn-primary mb-2">}}
+<i class="fas fa-arrow-right"></i> Convert Bitwarten to printable Document
 {{< /markdown/button >}}
 
 What you decide in the end is your choice. After all, you have to deal with it.
