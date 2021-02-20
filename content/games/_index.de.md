@@ -6,7 +6,7 @@ draft: false
 menu:
     main:
         identifier: "games"
-        weight: 2
+        weight: 3
 ---
 
 * [World of Warcraft](world-of-warcraft)
