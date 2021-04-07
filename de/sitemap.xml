@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://cyb10101.github.io/de/</loc>
     <lastmod>2021-02-19T17:57:26+01:00</lastmod>
@@ -17,9 +16,7 @@
                 hreflang="de"
                 href="https://cyb10101.github.io/de/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cyb10101.github.io/de/posts/file-sharing/</loc>
     <lastmod>2021-02-19T17:57:26+01:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -34,9 +31,7 @@
                 hreflang="de"
                 href="https://cyb10101.github.io/de/posts/file-sharing/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cyb10101.github.io/de/posts/bitwarden-print/</loc>
     <lastmod>2021-02-18T17:58:26+01:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -51,9 +46,7 @@
                 hreflang="de"
                 href="https://cyb10101.github.io/de/posts/bitwarden-print/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cyb10101.github.io/de/posts/password-manager/</loc>
     <lastmod>2021-02-18T17:57:26+01:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -68,9 +61,7 @@
                 hreflang="de"
                 href="https://cyb10101.github.io/de/posts/password-manager/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cyb10101.github.io/de/posts/</loc>
     <lastmod>2021-02-12T14:58:51+01:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -85,9 +76,7 @@
                 hreflang="de"
                 href="https://cyb10101.github.io/de/posts/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cyb10101.github.io/de/games/</loc>
     <lastmod>2021-02-12T14:58:51+01:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -102,9 +91,7 @@
                 hreflang="de"
                 href="https://cyb10101.github.io/de/games/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cyb10101.github.io/de/games/world-of-warcraft/open-lever-chest/</loc>
     <lastmod>2021-02-12T14:58:51+01:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -119,9 +106,7 @@
                 hreflang="de"
                 href="https://cyb10101.github.io/de/games/world-of-warcraft/open-lever-chest/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cyb10101.github.io/de/games/world-of-warcraft/</loc>
     <lastmod>2021-02-12T14:58:51+01:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -136,9 +121,7 @@
                 hreflang="de"
                 href="https://cyb10101.github.io/de/games/world-of-warcraft/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cyb10101.github.io/de/about/</loc>
     <lastmod>2021-02-12T14:58:51+01:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -153,9 +136,7 @@
                 hreflang="de"
                 href="https://cyb10101.github.io/de/about/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://cyb10101.github.io/de/series/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -170,5 +151,4 @@
                 href="https://cyb10101.github.io/de/series/"
                 />
   </url>
-  
 </urlset>
