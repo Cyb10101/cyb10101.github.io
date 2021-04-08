@@ -25,8 +25,8 @@ By the way, my personal favorite for sending files is the Croc program.</descrip
       <pubDate>Thu, 18 Feb 2021 17:58:26 +0100</pubDate>
       
       <guid>https://cyb10101.github.io/posts/bitwarden-print/</guid>
-      <description>Converts a JSON export from Bitwarden into a printable document.
-Bitwarden JSON:   This is a danger alert—check it out!  Print   class BitwardenToPdf { constructor() { this.title = &#39;Passwords&#39;; this.columns = [&#39;Title&#39;, &#39;Username&#39;, &#39;Password&#39;, &#39;URL&#39;]; this.form = document.getElementById(&#39;bitwardenToPdf&#39;); let instance = this; document.getElementById(&#39;convert&#39;).addEventListener(&#39;click&#39;, function() { instance.convert(); }); } convert() { this.setAlert(); try { let code = this.form.bitwardenToPdf_json.value; code = JSON.parse(code); this.printContent(this.convertJsonToHTML(code)); } catch (exception) { this.</description>
+      <description> Converts a JSON export from Bitwarden into a printable document.
+Bitwarden JSON:    Print  </description>
     </item>
     
     <item>
