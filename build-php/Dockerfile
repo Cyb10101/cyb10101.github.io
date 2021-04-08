@@ -1,6 +1,8 @@
 FROM cyb10101/php-dev:apache-7.4
 
-RUN curl -fSL -o /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.80.0/hugo_extended_0.80.0_Linux-64bit.deb && \
+ENV HUGO_VERSION=0.82.0
+
+RUN curl -fSL -o /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb && \
     dpkg -i /tmp/hugo.deb && rm /tmp/hugo.deb && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
