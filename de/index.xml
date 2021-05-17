@@ -6,19 +6,7 @@
     <description>Recent content on Cyb10101</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 19 Feb 2021 17:57:26 +0100</lastBuildDate><atom:link href="https://cyb10101.github.io/de/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Dateien teilen</title>
-      <link>https://cyb10101.github.io/de/posts/file-sharing/</link>
-      <pubDate>Fri, 19 Feb 2021 17:57:26 +0100</pubDate>
-      
-      <guid>https://cyb10101.github.io/de/posts/file-sharing/</guid>
-      <description>Dateien zu einem Partner (Empfänger) zu transferieren ist im Grunde ziemlich einfach.
-Meistens muss nur das bedenkt werden:
- Welches Medium: Über Software oder Hardware Welches Datei Format: In Archiv Packen, Splitten oder direkt versenden Welche Sicherheitsanforderungen: Passwort, Verschlüsselung  Für den Transfer über Hardware gibt es Externe Festplatte, USB-Stick oder Disk (CD, DVD, Bluray). Für den Transfer über Software, wird meistens das Internet genutzt.
-Mein persönlicher Favorit um Dateien zu versenden, ist übrigends das Programm Croc.</description>
-    </item>
-    
+    <lastBuildDate>Thu, 18 Feb 2021 17:58:26 +0100</lastBuildDate><atom:link href="https://cyb10101.github.io/de/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bitwarden zu Drucker</title>
       <link>https://cyb10101.github.io/de/posts/bitwarden-print/</link>

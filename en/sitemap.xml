@@ -2,36 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://cyb10101.github.io/</loc>
-    <lastmod>2021-02-19T17:57:26+01:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cyb10101.github.io/de/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cyb10101.github.io/"
-                />
-  </url><url>
-    <loc>https://cyb10101.github.io/posts/file-sharing/</loc>
-    <lastmod>2021-02-19T17:57:26+01:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="de"
-                href="https://cyb10101.github.io/de/posts/file-sharing/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://cyb10101.github.io/posts/file-sharing/"
-                />
-  </url><url>
     <loc>https://cyb10101.github.io/posts/bitwarden-print/</loc>
     <lastmod>2021-02-18T17:58:26+01:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -45,6 +15,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://cyb10101.github.io/posts/bitwarden-print/"
+                />
+  </url><url>
+    <loc>https://cyb10101.github.io/</loc>
+    <lastmod>2021-02-18T17:58:26+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="de"
+                href="https://cyb10101.github.io/de/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://cyb10101.github.io/"
                 />
   </url><url>
     <loc>https://cyb10101.github.io/posts/password-manager/</loc>
