@@ -1,7 +1,7 @@
 ---
 title: "Password manager"
 description: "Password manager"
-keywords: password,manager,bitwarden,lastpass,keepass
+keywords: password,manager,bitwarden,keepass
 date: 2021-02-18T17:57:26+01:00
 ---
 
@@ -10,7 +10,6 @@ date: 2021-02-18T17:57:26+01:00
 I would recommend Bitwarden and it would be best to also use an authenticator.
 
 * [Bitwarden](https://bitwarden.com/) (Free/Premium)
-* [LastPass](https://lastpass.com/) (Free/Premium)
 * [KeePass](https://keepass.info/) (Free)
 
 ### Authenticator
@@ -21,7 +20,6 @@ Bitwarden Authenticator (TOTP) is only available for Premium.
 
 * [Authy](https://authy.com/) (Free)
 * [Google Authentificator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) (Free)
-* [LastPass Authentificator](https://lastpass.com/auth/) (Free)
 * [Bitwarden Authenticator (TOTP)](https://bitwarden.com/help/article/authenticator-keys/) (Premium)
 
 ### Switching off the password manager in Firefox
@@ -61,7 +59,7 @@ But this is often a bit rudimentary and has its problems.
 ### Why not just a password manager?
 
 The only thing you can really do in a practical way is to use a password manager, which encrypts all data in the container.
-**For example Bitwarden, LastPass or KeePass.**
+**For example Bitwarden or KeePass.**
 
 In principle you have a **master password**, which you have to remember so that you can open your safe.
 Have you forgotten the master password since you literally fucked, because all passwords are not decipherable, so they are bad.
@@ -70,7 +68,7 @@ That's why you write down this one password and never forget it!
 **KeePass 1 + 2** is the local variant, so you have to make sure that you keep the file well.
 But it is also annoying because it is not exactly user-friendly and has its problems with synchronization.
 
-**Bitwarden** and **LastPass**, is the online variant. With which you can almost always have passwords filled out skillfully with an addon.
+**Bitwarden** is the online variant. With which you can almost always have passwords filled out skillfully with an addon.
 In addition, there are apps on the smartphone, whatever you always have with you.
 With an authenticator you can additionally protect access, which I would recommend.
 That’s comfortable!
@@ -78,7 +76,6 @@ That’s comfortable!
 Ultimately, I personally decided on Bitwarden because I find it much more pleasant.
 I've been using Password Manager for over 20 years and have never had to print out a password.
 If anyone wants to do that, I made a script for Bitwarden to make it look nice.
-Lastpass can do it too, it just looks like shit.
 
 {{< markdown/button url="posts/bitwarden-print" class="btn-primary mb-2">}}
 <i class="fas fa-arrow-right"></i> Convert Bitwarten to printable Document

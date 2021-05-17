@@ -1,7 +1,7 @@
 ---
 title: "Passwort Manager"
 description: "Passwort Manager"
-keywords: passwort,manager,bitwarden,lastpass,keepass
+keywords: passwort,manager,bitwarden,keepass
 date: 2021-02-18T17:57:26+01:00
 ---
 
@@ -10,7 +10,6 @@ date: 2021-02-18T17:57:26+01:00
 Ich würde Bitwarden empfehlen und am besten zusätzlich mit einem Authentifikator.
 
 * [Bitwarden](https://bitwarden.com/) (Kostenlos/Premium)
-* [LastPass](https://lastpass.com/) (Kostenlos/Premium)
 * [KeePass](https://keepass.info/) (Kostenlos)
 
 ### Authentifikator
@@ -21,7 +20,6 @@ Bitwarden Authenticator (TOTP) ist nur für Premium erhältlich.
 
 * [Authy](https://authy.com/) (Kostenlos)
 * [Google Authentificator](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2) (Kostenlos)
-* [LastPass Authentificator](https://lastpass.com/auth/) (Kostenlos)
 * [Bitwarden Authenticator (TOTP)](https://bitwarden.com/help/article/authenticator-keys/) (Premium)
 
 ### Abschalten des Passwort Manager in Firefox
@@ -61,7 +59,7 @@ Dieser ist aber oft etwas rudimentär und hat so seine Problemchen.
 ### Warum nicht einfach ein Passwort Manager?
 
 Das einzige was ihr wirklich praktisch machen könnt, ist ein Passwort Manager zu nutzen, welcher alle Daten im Container verschlüsselt.
-**Zum Beispiel Bitwarden, LastPass oder KeePass.**
+**Zum Beispiel Bitwarden oder KeePass.**
 
 Im Prinzip habt ihr ein **Master-Passwort**, welches ihr euch merken müsst, damit ihr euren Tresor öffnen könnt.
 Habt ihr das Master-Passwort vergessen, seit ihr Wortwörtlich gefickt, da alle Passwörter nicht entschlüsselbar sind, also pfutsch sind.
@@ -70,7 +68,7 @@ Deswegen schreibt man sich dieses eine Passwort auf und vergisst es nie!
 **KeePass 1+2** ist die lokale Variante, da muss man drauf achten, dass man die Datei gut aufbewahrt.
 Es ist aber auch nervig, weil es nicht gerade benutzerfreundlich ist und mit syncronisation seine Problemchen hat.
 
-**Bitwarden** und **LastPass**, ist die online Variante. Womit man Passwörter fast immer mit einem Addon geschickt ausfüllen lassen kann.
+**Bitwarden** ist die online Variante. Womit man Passwörter fast immer mit einem Addon geschickt ausfüllen lassen kann.
 Zudem gibt es auf dem Smartphone Apps, womit man sie auch immer dabei hat.
 Mit einem Authentifikator könnt ihr Zugriffe zusätzlich schützen, was ich auch empfehlen würde.
 Das ist doch mal komfortabel!
@@ -78,7 +76,6 @@ Das ist doch mal komfortabel!
 Letztlich habe ich mich persönlich zu Bitwarden entschieden, weil ich das viel angenehmer finde.
 Ich benutze Passwort Manager seit über 20 Jahren und habe nie ein Passwort ausdrucken müssen.
 Falls das jemand machen will, habe ich für Bitwarden ein Script gemacht, damit das hübsch aussieht.
-Lastpass kann es auch, sieht halt scheiße aus.
 
 {{< markdown/button url="posts/bitwarden-print" class="btn-primary mb-2">}}
 <i class="fas fa-arrow-right"></i> Konvertiere Bitwarten zu einem druckbaren Dokument
