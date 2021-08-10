@@ -1,4 +1,4 @@
-FROM cyb10101/php-dev:apache-7.4
+FROM cyb10101/php-dev:apache-8.0
 
 ENV HUGO_VERSION=0.82.0
 
