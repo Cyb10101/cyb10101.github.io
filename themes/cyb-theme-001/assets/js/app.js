@@ -7,6 +7,7 @@ const $ = jQuery;
 
 import 'popper.js/dist/popper.js';
 import 'bootstrap/dist/js/bootstrap';
+import './fontAwesome.js';
 
 import {Page} from './page.js';
 import {Navigation} from './navigation.js';

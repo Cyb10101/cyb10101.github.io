@@ -10,12 +10,6 @@ $font-family-base: "Open Sans";
 //$font-family-base: "Lato";
 @import './node_modules/bootstrap/scss/bootstrap';
 
-$fa-font-path: "/vendor/fontawesome/webfonts";
-@import './node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
-@import './node_modules/@fortawesome/fontawesome-free/scss/brands';
-@import './node_modules/@fortawesome/fontawesome-free/scss/regular';
-@import './node_modules/@fortawesome/fontawesome-free/scss/solid';
-
 @import '_functions';
 
 $palette: (

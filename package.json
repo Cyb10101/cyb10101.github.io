@@ -2,9 +2,12 @@
     "license": "UNLICENSED",
     "private": true,
     "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.14.0",
+        "@fortawesome/fontawesome-svg-core": "^1.2.36",
+        "@fortawesome/free-brands-svg-icons": "^5.15.4",
+        "@fortawesome/free-regular-svg-icons": "^5.15.4",
+        "@fortawesome/free-solid-svg-icons": "^5.15.4",
         "bootstrap": "^4.5.2",
-        "jquery": "^3.5.1",
+        "jquery": "^3.6.0",
         "popper.js": "^1.16.1"
     },
     "devDependencies": {},
