@@ -48,7 +48,8 @@
                 border-bottom: none;
                 outline: none;
 
-                @include hover-focus() {
+                &:hover,
+                &:focus {
                     color: $link-color;
                 }
             }
