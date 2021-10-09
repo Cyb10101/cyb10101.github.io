@@ -12,7 +12,6 @@ import './fontAwesome.js';
 import {Page} from './page.js';
 import {Navigation} from './navigation.js';
 import {DarkMode} from './dark-mode.js';
-import {BitwardenToPdf} from './bitwarden-to-pdf.js';
 
 window.$ = $;
 window.jQuery = jQuery;
@@ -35,4 +34,3 @@ window.jQuery = jQuery;
 const page = new Page();
 const navigation = new Navigation();
 const darkMode = new DarkMode();
-const bitwardenToPdf = new BitwardenToPdf();
