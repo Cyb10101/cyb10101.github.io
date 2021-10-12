@@ -22532,7 +22532,7 @@
     faZhihu
   };
 
-  // ns-hugo:/home/runner/work/cyb10101.github.io/cyb10101.github.io/themes/cyb-theme-001/assets/js/fontAwesome.js
+  // ns-hugo:/home/runner/work/cyb10101.github.io/cyb10101.github.io/themes/cyb-theme-001/assets/js/font-awesome.js
   library.add(_iconsCache, _iconsCache2, _iconsCache3);
   dom.watch();
 
