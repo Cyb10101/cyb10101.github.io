@@ -1,0 +1,67 @@
+---
+title: "Watchlists from The Movie Database"
+description: "Watchlists from The Movie Database"
+keywords: tmdb,watchlist
+date: 2021-11-07T17:58:26+01:00
+---
+
+<div class="page js-tmdb-watchlist">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 my-2">
+                <b>1:</b>
+                <label for="apiKeyV4" class="form-label">API token for read access (v4 auth)</label>
+                <input type="text" class="form-control" id="apiKeyV4" placeholder="API token for read access (v4 auth)" value="">
+                <div class="form-text">
+                    <a href="https://www.themoviedb.org/settings/api" target="_blank">Get API token</a> on The Movie Database. Saved in local storage.
+                </div>
+            </div>
+
+            <div class="col-12 my-2">
+                <hr>
+                <b>2:</b> Get Watchlists (Mabye initilize to get a access token)
+            </div>
+            <div class="col-6 toolbar">
+                <button id="initialize" class="btn btn-secondary btn-sm">Initialize</button>
+                <button id="getWatchlists" class="btn btn-primary btn-sm">Get Watchlists</button>
+            </div>
+            <div class="col-6">
+                <progress id="progress" value="0"></progress>
+                <span id="status" class="status"></span>
+            </div>
+
+            <div class="col-12">
+                <hr>
+                <b>3:</b> Filter
+                <input type="search" id="search" class="form-control" placeholder="Search..." title="Search" value="">
+            </div>
+            <div class="col-12">
+                <div class="mt-1">Provider with flatrate</div>
+            </div>
+            <div class="col-12 js-providers">
+            </div>
+            <div class="col-12">
+                <hr>
+                <h2 class="mt-2">Movies</h2>
+                <div id="movies" class="movies"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="tmdb_request_token" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Accept request token</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Confirm request token in new window for the access token from The Movie Database!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Token confirmed</button>
+            </div>
+        </div>
+    </div>
+</div>
