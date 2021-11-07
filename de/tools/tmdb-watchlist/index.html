@@ -160,46 +160,44 @@
         </header>
 
         
-<div class="page js-tmdb-watchlist">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 my-2">
-                <b>1:</b>
-                <label for="apiKeyV4" class="form-label">API-Token für Lesezugriff (v4-Authentifizierung)</label>
-                <input type="text" class="form-control" id="apiKeyV4" placeholder="API-Token für Lesezugriff (v4-Authentifizierung)" value="">
-                <div class="form-text">
-                    <a href="https://www.themoviedb.org/settings/api" target="_blank">API-Token abrufen</a> auf The Movie Database. Im lokalen Speicher gespeichert.
-                </div>
+<div class="container js-tmdb-watchlist">
+    <div class="row">
+        <div class="col-12 my-2">
+            <b>1:</b>
+            <label for="apiKeyV4" class="form-label">API-Token für Lesezugriff (v4-Authentifizierung)</label>
+            <input type="text" class="form-control" id="apiKeyV4" placeholder="API-Token für Lesezugriff (v4-Authentifizierung)" value="">
+            <div class="form-text">
+                <a href="https://www.themoviedb.org/settings/api" target="_blank">API-Token abrufen</a> auf The Movie Database. Im lokalen Speicher gespeichert.
             </div>
+        </div>
 
-            <div class="col-12 my-2">
-                <hr>
-                <b>2:</b> Watchlists abrufen (Eventuell initialisieren, um ein Zugriffstoken zu erhalten)
-            </div>
-            <div class="col-6 toolbar">
-                <button id="initialize" class="btn btn-secondary btn-sm">Initialisieren</button>
-                <button id="getWatchlists" class="btn btn-primary btn-sm">Watchlists abrufen</button>
-            </div>
-            <div class="col-6">
-                <progress id="progress" value="0"></progress>
-                <span id="status" class="status"></span>
-            </div>
+        <div class="col-12 my-2">
+            <hr>
+            <b>2:</b> Watchlists abrufen (Eventuell initialisieren, um ein Zugriffstoken zu erhalten)
+        </div>
+        <div class="col-6 toolbar">
+            <button id="initialize" class="btn btn-secondary btn-sm">Initialisieren</button>
+            <button id="getWatchlists" class="btn btn-primary btn-sm">Watchlists abrufen</button>
+        </div>
+        <div class="col-6">
+            <progress id="progress" value="0"></progress>
+            <span id="status" class="status"></span>
+        </div>
 
-            <div class="col-12">
-                <hr>
-                <b>3:</b> Filter
-                <input type="search" id="search" class="form-control" placeholder="Suchen..." title="Suchen" value="">
-            </div>
-            <div class="col-12">
-                <div class="mt-1">Anbieter mit Flatrate</div>
-            </div>
-            <div class="col-12 js-providers">
-            </div>
-            <div class="col-12">
-                <hr>
-                <h2 class="mt-2">Filme</h2>
-                <div id="movies" class="movies"></div>
-            </div>
+        <div class="col-12">
+            <hr>
+            <b>3:</b> Filter
+            <input type="search" id="search" class="form-control" placeholder="Suchen..." title="Suchen" value="">
+        </div>
+        <div class="col-12">
+            <div class="mt-1">Anbieter mit Flatrate</div>
+        </div>
+        <div class="col-12 js-providers">
+        </div>
+        <div class="col-12">
+            <hr>
+            <h2 class="mt-2">Filme</h2>
+            <div id="movies" class="movies"></div>
         </div>
     </div>
 </div>
