@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="en">
+    <meta http-equiv="Content-Language" content="de">
 
     <meta name="author" content="Cyb10101">
-    <meta name="description" content="Cyb10101 personal website">
-    <meta name="keywords" content="blog,developer,personal">
+    <meta name="description" content="Watchlists aus The Movie Database">
+    <meta name="keywords" content="tmdb,watchlist">
 
     
 
-    <title>Cyb10101</title>
+    <title>
+  Watchlists aus The Movie Database | Cyb10101
+</title>
 
-    <link rel="canonical" href="https://cyb10101.github.io/">
+    <link rel="canonical" href="https://cyb10101.github.io/de/tools/tmdb-watchlist/">
 
     
 
@@ -31,7 +33,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon.ico">
 
-    <link rel="alternate" type="application/rss+xml" href="/index.xml" title="Cyb10101" />
     <meta name="generator" content="Hugo 0.89.1" />
 </head>
 
@@ -44,7 +45,7 @@
     <ul class="navigation-vertical nav flex-column mb-0">
         
         <li class="nav-item">
-            <a href="/" class="nav-link active">
+            <a href="/" class="nav-link">
                 <i class="fas fa-home mr-3 text-primary fa-fw"></i> Home
             </a>
         </li>
@@ -54,7 +55,7 @@
         
             <li class="nav-item">
             
-                <a href="/posts/" class="nav-link">
+                <a href="/de/posts/" class="nav-link">
                     <i class="far fa-sticky-note mr-3 text-primary fa-fw"></i>
                     Blog
                     
@@ -64,7 +65,7 @@
         
             <li class="nav-item">
             
-                <a href="/tools/" class="nav-link">
+                <a href="/de/tools/" class="nav-link active">
                     <i class="far fa-sticky-note mr-3 text-primary fa-fw"></i>
                     Tools
                     
@@ -83,7 +84,7 @@
                 <ul class="collapse" id="nav-vertical-games">
                     
                     <li class="nav-item">
-                        <a href="/games/world-of-warcraft/" class="nav-link">
+                        <a href="/de/games/world-of-warcraft/" class="nav-link">
                             <i class="far fa-sticky-note mr-3 text-primary fa-fw"></i>
                             World of Warcaft
                             
@@ -96,9 +97,9 @@
         
             <li class="nav-item">
             
-                <a href="/about/" class="nav-link">
+                <a href="/de/about/" class="nav-link">
                     <i class="far fa-sticky-note mr-3 text-primary fa-fw"></i>
-                    About
+                    Über
                     
                 </a>
             
@@ -131,12 +132,12 @@
                     <li><a href="#" id="dark-mode-toggle" title="Toogle dark mode"><i class="fas fa-moon"></i></a></li>
                     
 <li class="language-menu">
-    <div><i class="fas fa-language"></i> Language <i class="fas fa-angle-down"></i></div>
+    <div><i class="fas fa-language"></i> Sprache <i class="fas fa-angle-down"></i></div>
     <ul>
         
         <li>
-            <a href="/de/" title="Deutsch">
-                Deutsch
+            <a href="/tools/tmdb-watchlist/" title="English">
+                English
             </a>
         </li>
         
@@ -150,12 +151,79 @@
             
 
             
-<section>
-    <h2>Development</h2>
-    <ul>
-        <li>Currently in development</li>
-        <li>Other languages than english may be not exits as page</li>
-    </ul>
+<section class="container-fluid page">
+    <article>
+        <header>
+            <h1 class="title">
+                <a class="title-link" href="https://cyb10101.github.io/de/tools/tmdb-watchlist/">Watchlists aus The Movie Database</a>
+            </h1>
+        </header>
+
+        
+<div class="page js-tmdb-watchlist">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 my-2">
+                <b>1:</b>
+                <label for="apiKeyV4" class="form-label">API-Token für Lesezugriff (v4-Authentifizierung)</label>
+                <input type="text" class="form-control" id="apiKeyV4" placeholder="API-Token für Lesezugriff (v4-Authentifizierung)" value="">
+                <div class="form-text">
+                    <a href="https://www.themoviedb.org/settings/api" target="_blank">API-Token abrufen</a> auf The Movie Database. Im lokalen Speicher gespeichert.
+                </div>
+            </div>
+
+            <div class="col-12 my-2">
+                <hr>
+                <b>2:</b> Watchlists abrufen (Eventuell initialisieren, um ein Zugriffstoken zu erhalten)
+            </div>
+            <div class="col-6 toolbar">
+                <button id="initialize" class="btn btn-secondary btn-sm">Initialisieren</button>
+                <button id="getWatchlists" class="btn btn-primary btn-sm">Watchlists abrufen</button>
+            </div>
+            <div class="col-6">
+                <progress id="progress" value="0"></progress>
+                <span id="status" class="status"></span>
+            </div>
+
+            <div class="col-12">
+                <hr>
+                <b>3:</b> Filter
+                <input type="search" id="search" class="form-control" placeholder="Suchen..." title="Suchen" value="">
+            </div>
+            <div class="col-12">
+                <div class="mt-1">Anbieter mit Flatrate</div>
+            </div>
+            <div class="col-12 js-providers">
+            </div>
+            <div class="col-12">
+                <hr>
+                <h2 class="mt-2">Filme</h2>
+                <div id="movies" class="movies"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="tmdb_request_token" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Accept request token</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Confirm request token in new window for the access token from The Movie Database!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Token confirmed</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        
+    </article>
 </section>
 
 

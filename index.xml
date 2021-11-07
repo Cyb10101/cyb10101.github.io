@@ -6,7 +6,16 @@
     <description>Recent content on Cyb10101</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 Feb 2021 17:58:26 +0100</lastBuildDate><atom:link href="https://cyb10101.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Nov 2021 17:58:26 +0100</lastBuildDate><atom:link href="https://cyb10101.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Watchlists from The Movie Database</title>
+      <link>https://cyb10101.github.io/tools/tmdb-watchlist/</link>
+      <pubDate>Sun, 07 Nov 2021 17:58:26 +0100</pubDate>
+      
+      <guid>https://cyb10101.github.io/tools/tmdb-watchlist/</guid>
+      <description>1: API token for read access (v4 auth) Get API token on The Movie Database. Saved in local storage.    2: Get Watchlists (Mabye initilize to get a access token)  Initialize Get Watchlists      3: Filter  Provider with flatrate    Movies      Accept request token   Confirm request token in new window for the access token from The Movie Database!</description>
+    </item>
+    
     <item>
       <title>Bitwarden to printer</title>
       <link>https://cyb10101.github.io/posts/bitwarden-print/</link>

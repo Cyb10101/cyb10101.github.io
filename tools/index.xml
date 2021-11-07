@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on Cyb10101</title>
+    <link>https://cyb10101.github.io/tools/</link>
+    <description>Recent content in Tools on Cyb10101</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Nov 2021 01:01:01 +0100</lastBuildDate><atom:link href="https://cyb10101.github.io/tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Watchlists from The Movie Database</title>
+      <link>https://cyb10101.github.io/tools/tmdb-watchlist/</link>
+      <pubDate>Sun, 07 Nov 2021 17:58:26 +0100</pubDate>
+      
+      <guid>https://cyb10101.github.io/tools/tmdb-watchlist/</guid>
+      <description>1: API token for read access (v4 auth) Get API token on The Movie Database. Saved in local storage.    2: Get Watchlists (Mabye initilize to get a access token)  Initialize Get Watchlists      3: Filter  Provider with flatrate    Movies      Accept request token   Confirm request token in new window for the access token from The Movie Database!</description>
+    </item>
+    
+  </channel>
+</rss>
