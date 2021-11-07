@@ -66,7 +66,7 @@ class Navigation {
 
         // On link click, fancy close an load
         this.sidebarInner.querySelectorAll('a').forEach(link => {
-            if (!link.href || link.href === '#' || link.dataset.toggle && link.dataset.toggle === 'collapse') {
+            if (!link.href || link.href === '#' || link.dataset.bsToggle && link.dataset.bbsToggle === 'collapse') {
                 return;
             }
 

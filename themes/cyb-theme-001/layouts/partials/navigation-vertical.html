@@ -10,9 +10,9 @@
 
         {{ if ne hugo.Environment "production" -}}
         <li class="nav-item">
-            <a href="#nav-vertical-development-deprecated" class="nav-link collapsed" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+            <a href="#nav-vertical-development-deprecated" class="nav-link collapsed" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
                 <i class="fas fa-flask mr-3 text-primary fa-fw"></i> Development
-                <span class="badge badge-secondary">Deprecated</span>
+                <span class="badge bg-secondary">Deprecated</span>
                 <i class="fas fa-angle-down"></i>
             </a>
             <ul class="collapse" id="nav-vertical-development-deprecated">
@@ -43,7 +43,7 @@
         {{ range .Site.Menus.main }}
             <li class="nav-item">
             {{ if .HasChildren }}
-                <a href="#nav-vertical-{{ .Identifier }}" class="nav-link{{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) (hasPrefix $currentPage.URL .URL) }} active{{ else }} collapsed{{ end }}" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
+                <a href="#nav-vertical-{{ .Identifier }}" class="nav-link{{ if or ($currentPage.HasMenuCurrent "main" .) ($currentPage.IsMenuCurrent "main" .) (hasPrefix $currentPage.URL .URL) }} active{{ else }} collapsed{{ end }}" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseExample">
                     {{ if .Pre }}{{ .Pre | safeHTML }}{{ else }}<i class="fas fa-list mr-3 text-primary fa-fw"></i>{{ end }}
                     {{ .Name }}
                     {{ .Post }}

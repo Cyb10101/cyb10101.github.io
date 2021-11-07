@@ -5,16 +5,17 @@
 import * as jQuery from 'jquery';
 const $ = jQuery;
 
-import 'popper.js/dist/popper.js';
 import 'bootstrap/dist/js/bootstrap';
 import './font-awesome.js';
 
 import {Page} from './page.js';
 import {Navigation} from './navigation.js';
 import {DarkMode} from './dark-mode.js';
+import {TmdbWatchlist} from './tmdb-watchlist.js';
 
-window.$ = $;
-window.jQuery = jQuery;
+// @todo jquery bug with bootstrap
+// window.$ = $;
+// window.jQuery = jQuery;
 
 // @todo jquery
 // import {jQuery} from 'jquery/dist/jquery';
@@ -34,3 +35,10 @@ window.jQuery = jQuery;
 const page = new Page();
 const navigation = new Navigation();
 const darkMode = new DarkMode();
+
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.querySelector('.js-tmdb-watchlist')) {
+        const tmdbWatchlist = new TmdbWatchlist();
+        tmdbWatchlist.initialize();
+    }
+});

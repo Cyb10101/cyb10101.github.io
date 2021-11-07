@@ -25,7 +25,7 @@
     {{- template "_internal/twitter_cards.html" . -}}
 
     {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
-    {{ template "_internal/google_analytics_async.html" . }}
+        {{ template "_internal/google_analytics_async.html" . }}
     {{ end }}
     */}}
 
@@ -55,13 +55,13 @@
     */}}
 
     {{ if eq hugo.Environment "production" -}}
-        {{ $cssOpts := (dict "targetPath" "css/app.css" "enableSourceMap" true ) }}
-        {{ $styles := resources.Get "scss/app.scss" | resources.ExecuteAsTemplate "style.app.css" . | toCSS $cssOpts }}
-        <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
-    {{ else -}}
         {{ $cssOpts := (dict "targetPath" "css/app.css" ) }}
         {{ $styles := resources.Get "scss/app.scss" | resources.ExecuteAsTemplate "style.app.css" . | toCSS $cssOpts | minify | fingerprint }}
         <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}" crossorigin="anonymous" media="screen" />
+    {{ else -}}
+        {{ $cssOpts := (dict "targetPath" "css/app.css" "enableSourceMap" true ) }}
+        {{ $styles := resources.Get "scss/app.scss" | resources.ExecuteAsTemplate "style.app.css" . | toCSS $cssOpts }}
+        <link rel="stylesheet" href="{{ $styles.RelPermalink }}" media="screen">
     {{- end }}
 
     {{/*
@@ -158,10 +158,10 @@
     </div>
 
     {{ if eq hugo.Environment "production" -}}
-        {{ $script := resources.Get "js/app.js" | js.Build }}
-        <script src="{{ $script.RelPermalink }}"></script>
-    {{ else -}}
         {{ $script := resources.Get "js/app.js" | js.Build | minify | fingerprint }}
+        <script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+    {{ else -}}
+        {{ $script := resources.Get "js/app.js" | js.Build }}
         <script src="{{ $script.RelPermalink }}"></script>
     {{- end }}
 </body></html>
