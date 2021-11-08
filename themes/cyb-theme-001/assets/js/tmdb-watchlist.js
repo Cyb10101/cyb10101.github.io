@@ -445,8 +445,8 @@ class TmdbWatchlist {
         toSort = Array.prototype.slice.call(toSort, 0);
 
         toSort.sort((a, b) => {
-            let aord = a.title;
-            let bord = b.title;
+            let aord = a.title.toLowerCase();
+            let bord = b.title.toLowerCase();
             return (aord > bord) ? 1 : -1;
         });
 
@@ -468,8 +468,8 @@ class TmdbWatchlist {
         toSort = Array.prototype.slice.call(toSort, 0);
 
         toSort.sort((a, b) => {
-            let aord = a.dataset.title;
-            let bord = b.dataset.title;
+            let aord = a.dataset.title.toLowerCase();
+            let bord = b.dataset.title.toLowerCase();
             return (aord > bord) ? 1 : -1;
         });
 
