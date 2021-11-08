@@ -362,7 +362,7 @@ class TmdbWatchlist {
         element.dataset.year = movie.year;
         element.classList.add('movie');
         element.innerHTML = '' +
-            '<a href="' + this.config.website + 'movie/' + movie.id + '" target="_blank">' +
+            '<a href="' + this.config.website + movie.type + '/' + movie.id + '" target="_blank">' +
             '<img src="' + this.config.imageUrl + movie.image + '">' +
             '</a><br>' + movie.title + ' (' + movie.year + ')' + '<br>' +
             '<a href="https://www.justwatch.com/de/Suche?q=' + movie.title + '" target="_blank">' +
