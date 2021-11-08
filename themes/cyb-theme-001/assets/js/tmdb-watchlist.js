@@ -20,6 +20,10 @@ class TmdbWatchlist {
                 337, // Disney Plus
             ],
         };
+        this.providerProgress = {
+            current: 0,
+            total: 0,
+        }
     }
 
     initialize() {
@@ -237,6 +241,17 @@ class TmdbWatchlist {
         return first.toLocaleUpperCase(locale) + rest.join('');
     }
 
+    waitForIt(condition, callback, milliseconds) {
+        let instance = this;
+        if (!condition()) {
+            setTimeout(() => {
+                instance.waitForIt(condition, callback, milliseconds)
+            }, milliseconds);
+        } else {
+            callback();
+        }
+    }
+
     createMovieEntity(movie, type) {
         let title = '';
         if (movie.hasOwnProperty('title')) {
@@ -286,14 +301,17 @@ class TmdbWatchlist {
         }).catch(console.error);
 
         task.enqueueTask('Organize', () => {
-            setTimeout(() => {
+            instance.waitForIt(() => {
+                return this.providerProgress.current > 0 && this.providerProgress.current === this.providerProgress.total;
+            }, () => {
                 instance.sortMoviesContainer();
                 instance.sortProviderContainer();
                 instance.search();
+
                 setTimeout(() => {
                     instance.updateStatus('Done');
-                }, 1000);
-            }, 500);
+                }, 500);
+            }, 1000);
         });
     }
 
@@ -360,6 +378,7 @@ class TmdbWatchlist {
         let instance = this;
         let providerContainer = document.querySelector('.js-providers');
         task.enqueueTask('Get provider', (movie) => {
+            this.providerProgress.total++;
             instance.getApi3(movie.type + '/' + movie.id + '/watch/providers').then((data) => {
                 if (data.hasOwnProperty('results') && data.results.hasOwnProperty('DE') && data.results.DE.hasOwnProperty('flatrate')) {
                     let movieElement = document.getElementById(movie.type + '-' + movie.id);
@@ -415,7 +434,9 @@ class TmdbWatchlist {
                         }
                     });
                 }
-            }).catch(error => console.error('Ajax get providers:', error));
+            }).catch(error => console.error('Ajax get providers:', error)).finally(() => {
+                this.providerProgress.current++;
+            });
         }, movie);
     }
 
