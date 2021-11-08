@@ -17,6 +17,7 @@ class TmdbWatchlist {
                 8, // Netflix
                 175, // Netflix Kids
                 9, // Amazon Prime
+                533, // Amazon Arthaus Channel
                 337, // Disney Plus
             ],
         };
@@ -418,8 +419,8 @@ class TmdbWatchlist {
                         let url = '';
                         if (provider.provider_id === 8 || provider.provider_id === 175) {
                             url = 'https://www.netflix.com/search?q=' + encodeURIComponent(movie.title);
-                        } else if (provider.provider_id === 9) {
-                            url = 'https://www.amazon.de/s?i=instant-video&k=' + encodeURIComponent(movie.title);
+                        } else if (provider.provider_id === 9 || provider.provider_id === 533) {
+                            url = 'https://www.amazon.de/s?i=instant-video&k=' + encodeURIComponent('"' + movie.title + '"');
                         }
 
                         if (url !== '') {
