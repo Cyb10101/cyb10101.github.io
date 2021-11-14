@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Language" content="de">
+    <meta http-equiv="Content-Language" content="en">
 
     <meta name="author" content="Cyb10101">
-    <meta name="description" content="Cyb10101 personal website">
-    <meta name="keywords" content="blog,developer,personal">
+    <meta name="description" content="Archivierte Karten auf einem Trello-Board löschen">
+    <meta name="keywords" content="trello,löschen,archiviert">
 
     
 
-    <title>Series | Cyb10101</title>
+    <title>
+  Trello tools | Cyb10101
+</title>
 
-    <link rel="canonical" href="https://cyb10101.github.io/de/series/">
+    <link rel="canonical" href="https://cyb10101.github.io/tools/trello-tools/">
 
     
 
@@ -31,7 +33,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/x-icon" sizes="32x32" href="/favicon.ico">
 
-    <link rel="alternate" type="application/rss+xml" href="/de/series/index.xml" title="Cyb10101" />
     <meta name="generator" content="Hugo 0.89.2" />
 </head>
 
@@ -54,7 +55,7 @@
         
             <li class="nav-item">
             
-                <a href="/de/posts/" class="nav-link">
+                <a href="/posts/" class="nav-link">
                     <i class="far fa-sticky-note mr-3 text-primary fa-fw"></i>
                     Blog
                     
@@ -64,7 +65,7 @@
         
             <li class="nav-item">
             
-                <a href="/de/tools/" class="nav-link">
+                <a href="/tools/" class="nav-link active">
                     <i class="far fa-sticky-note mr-3 text-primary fa-fw"></i>
                     Tools
                     
@@ -83,7 +84,7 @@
                 <ul class="collapse" id="nav-vertical-games">
                     
                     <li class="nav-item">
-                        <a href="/de/games/world-of-warcraft/" class="nav-link">
+                        <a href="/games/world-of-warcraft/" class="nav-link">
                             <i class="far fa-sticky-note mr-3 text-primary fa-fw"></i>
                             World of Warcaft
                             
@@ -96,9 +97,9 @@
         
             <li class="nav-item">
             
-                <a href="/de/about/" class="nav-link">
+                <a href="/about/" class="nav-link">
                     <i class="far fa-sticky-note mr-3 text-primary fa-fw"></i>
-                    Über
+                    About
                     
                 </a>
             
@@ -131,12 +132,12 @@
                     <li><a href="#" id="dark-mode-toggle" title="Toogle dark mode"><i class="fas fa-moon"></i></a></li>
                     
 <li class="language-menu">
-    <div><i class="fas fa-language"></i> Sprache <i class="fas fa-angle-down"></i></div>
+    <div><i class="fas fa-language"></i> Language <i class="fas fa-angle-down"></i></div>
     <ul>
         
         <li>
-            <a href="/series/" title="English">
-                English
+            <a href="/de/tools/trello-tools/" title="Deutsch">
+                Deutsch
             </a>
         </li>
         
@@ -150,23 +151,62 @@
             
 
             
-  <section class="container list">
-  <h1 class="title">
-    <a class="title-link" href="https://cyb10101.github.io/de/series/">Series</a>
-  </h1>
-  
-  <ul>
-    
-  </ul>
-  
+<section class="container-fluid page">
+    <article>
+        <header>
+            <h1 class="title">
+                <a class="title-link" href="https://cyb10101.github.io/tools/trello-tools/">Trello tools</a>
+            </h1>
+        </header>
+
+        
+<p>
+    Delete archived cards on a trello board.<br>
+    Generate API key and token in <a href="https://trello.com/app-key" target="_blank">Trello API key for developers</a>.
+    (Revoke token: <a href="https://trello.com/" target="_blank">Trello</a> > Account > Applications)
+</p>
+
+<div class="row js-trello-tools">
+    <div class="col-6 form-container">
+        <div class="form p-3">
+            <h4>1. Authorize</h4>
+            <div class="mb-3">
+                <label for="key" class="form-label">API key</label>
+                <input type="text" class="form-control" id="key" placeholder="API key" value="">
+            </div>
+            <div class="mb-3">
+                <label for="token" class="form-label">API token</label>
+                <input type="text" class="form-control" id="token" placeholder="API token" value="">
+            </div>
+            <button id="initialize" class="btn btn-primary">Initialize</button>
+        </div>
+    </div>
+
+    <div class="col-6 form-container">
+        <div class="form p-3">
+            <h4>2. Board actions</h4>
+            <label>
+                Board:
+                <select name="board" id="board"></select>
+            </label>
+
+            <button id="listArchived" class="btn btn-secondary disabled mt-2">List archived (Interactive)</button>
+            <button id="removeArchived" class="btn btn-secondary disabled mt-2">Remove archived (Just remove all)</button>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div id="output"></div>
+
+        <h4>Status output:</h4>
+        <pre id="status"></pre>
+    </div>
+</div>
 
 
-
-
-
-
+        
+    </article>
 </section>
-
 
 
             
