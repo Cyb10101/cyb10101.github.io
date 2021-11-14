@@ -12,6 +12,7 @@ import {Page} from './page.js';
 import {Navigation} from './navigation.js';
 import {DarkMode} from './dark-mode.js';
 import {TmdbWatchlist} from './tmdb-watchlist.js';
+import {TrelloTools} from "./trello-tools";
 
 // @todo jquery bug with bootstrap
 // window.$ = $;
@@ -35,6 +36,7 @@ import {TmdbWatchlist} from './tmdb-watchlist.js';
 const page = new Page();
 const navigation = new Navigation();
 const darkMode = new DarkMode();
+const trelloTools = new TrelloTools();
 
 document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.js-tmdb-watchlist')) {

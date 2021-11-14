@@ -1,0 +1,49 @@
+---
+title: "Trello tools"
+description: "Delete archived cards on a trello board"
+keywords: trello,delete,archived
+date: 2021-11-04T00:00:00+01:00
+---
+
+<p>
+    Archivierte Karten auf einem Trello-Board löschen.<br>
+    API-Schlüssel und Token generieren <a href="https://trello.com/app-key" target="_blank">Trello-API-Schlüssel für Entwickler</a>.
+    (Token widerrufen: <a href="https://trello.com/" target="_blank">Trello</a> > Konto > Anwendungen)
+</p>
+
+<div class="row js-trello-tools">
+    <div class="col-6 form-container">
+        <div class="form p-3">
+            <h4>1. Autorisieren</h4>
+            <div class="mb-3">
+                <label for="key" class="form-label">API key</label>
+                <input type="text" class="form-control" id="key" placeholder="API key" value="">
+            </div>
+            <div class="mb-3">
+                <label for="token" class="form-label">API token</label>
+                <input type="text" class="form-control" id="token" placeholder="API token" value="">
+            </div>
+            <button id="initialize" class="btn btn-primary">Initialize</button>
+        </div>
+    </div>
+
+    <div class="col-6 form-container">
+        <div class="form p-3">
+            <h4>2. Board aktionen</h4>
+            <label>
+                Board:
+                <select name="board" id="board"></select>
+            </label>
+
+            <button id="listArchived" class="btn btn-secondary disabled mt-2">Archivierte anzeigen (Interaktiv)</button>
+            <button id="removeArchived" class="btn btn-secondary disabled mt-2">Archivierte entfernen (Einfach alle entfernen)</button>
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div id="output"></div>
+
+        <h4>Status output:</h4>
+        <pre id="status"></pre>
+    </div>
+</div>
