@@ -24,11 +24,14 @@ services:
       - php.session.gc_maxlifetime=86400
       - PHP_DATE_TIMEZONE=Europe/Berlin
 
-       # SSL: Use default cert from global-nginx-proxy
+      # SSL: Use default cert from global-nginx-proxy
       - CERT_NAME=default
       # SSL: Do not a redirect in global-nginx-proxy, if you use another port than 443
       - HTTPS_METHOD=noredirect
       - HSTS=off
+
+      # PHP_DEBUGGER: xdebug, blackfire or none
+      - PHP_DEBUGGER=${PHP_DEBUGGER:-none}
     working_dir: /app
 
   node:
