@@ -3,6 +3,8 @@ import {Task} from './task.js';
 
 const task = new Task();
 
+const netslumCacheDirectUrl = 'https://cache.netslum.localhost/?type=direct&url=';
+
 class TmdbWatchlist {
     constructor() {
         this.config = {
@@ -363,7 +365,7 @@ class TmdbWatchlist {
         element.classList.add('movie');
         element.innerHTML = '' +
             '<a href="' + this.config.website + movie.type + '/' + movie.id + '" target="_blank">' +
-            '<img src="' + this.config.imageUrl + movie.image + '">' +
+            '<img src="' + netslumCacheDirectUrl + this.config.imageUrl + movie.image + '">' +
             '</a><br>' + movie.title + ' (' + movie.year + ')' + '<br>' +
             '<a href="https://www.justwatch.com/de/Suche?q=' + movie.title + '" target="_blank">' +
             '<img src="https://www.justwatch.com/appassets/favicon.ico" title="Just Watch" style="width: 32px;">' +
