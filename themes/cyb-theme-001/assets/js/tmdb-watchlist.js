@@ -3,7 +3,7 @@ import {Task} from './task.js';
 
 const task = new Task();
 
-const netslumCacheDirectUrl = 'https://cache.netslum.localhost/?type=direct&url=';
+const netslumCacheDirectUrl = 'https://cache.netslum.de/?type=direct&url=';
 
 class TmdbWatchlist {
     constructor() {
