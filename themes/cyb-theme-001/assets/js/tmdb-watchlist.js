@@ -3,10 +3,10 @@ import {Task} from './task.js';
 
 const task = new Task();
 
-const netslumCacheDirectUrl = 'https://cache.netslum.de/?type=direct&url=';
 
 class TmdbWatchlist {
     constructor() {
+        this.netslumCacheDirectUrl = 'https://cache.netslum.de/?type=direct&url=';
         this.config = {
             apiKeyV4: '', // API token for read access (v4 auth)
             requestToken: '', // Temporary
@@ -124,6 +124,7 @@ class TmdbWatchlist {
         return new Promise((resolve, reject) => {
             fetch(url, {
                 mode: 'cors',
+                cache: 'no-cache',
                 method: method,
                 headers: headers,
                 body: data
@@ -365,7 +366,7 @@ class TmdbWatchlist {
         element.classList.add('movie');
         element.innerHTML = '' +
             '<a href="' + this.config.website + movie.type + '/' + movie.id + '" target="_blank">' +
-            '<img src="' + netslumCacheDirectUrl + this.config.imageUrl + movie.image + '">' +
+            '<img src="' + this.netslumCacheDirectUrl + this.config.imageUrl + movie.image + '">' +
             '</a><br>' + movie.title + ' (' + movie.year + ')' + '<br>' +
             '<a href="https://www.justwatch.com/de/Suche?q=' + movie.title + '" target="_blank">' +
             '<img src="https://www.justwatch.com/appassets/favicon.ico" title="Just Watch" style="width: 32px;">' +
@@ -416,7 +417,7 @@ class TmdbWatchlist {
                         providerElement.title = provider.provider_name;
                         providerElement.dataset.id = provider.provider_id;
                         providerElement.dataset.movie = movie.id;
-                        providerElement.src = 'https://www.themoviedb.org/t/p/original' + provider.logo_path;
+                        providerElement.src = this.netslumCacheDirectUrl + 'https://www.themoviedb.org/t/p/original' + provider.logo_path;
 
                         let url = '';
                         if (provider.provider_id === 8 || provider.provider_id === 175) {
