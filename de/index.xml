@@ -13,7 +13,7 @@
       <pubDate>Sun, 07 Nov 2021 17:58:26 +0100</pubDate>
       
       <guid>https://cyb10101.github.io/de/tools/tmdb-watchlist/</guid>
-      <description> 1: API-Token für Lesezugriff (v4-Authentifizierung) API-Token abrufen auf The Movie Database. Im lokalen Speicher gespeichert.    2: Watchlists abrufen (Eventuell initialisieren, um ein Zugriffstoken zu erhalten)  Initialisieren Watchlists abrufen      3: Filter  Anbieter mit Flatrate    Filme    Accept request token   Confirm request token in new window for the access token from The Movie Database!  Token confirmed     </description>
+      <description> 1: API-Token für Lesezugriff (v4-Authentifizierung) API-Token abrufen auf The Movie Database. Im lokalen Speicher gespeichert. 2: Watchlists abrufen (Eventuell initialisieren, um ein Zugriffstoken zu erhalten) Initialisieren Watchlists abrufen 3: Filter Anbieter mit Flatrate Filme Accept request token Confirm request token in new window for the access token from The Movie Database! Token confirmed </description>
     </item>
     
     <item>
@@ -22,8 +22,8 @@
       <pubDate>Thu, 04 Nov 2021 00:00:00 +0100</pubDate>
       
       <guid>https://cyb10101.github.io/de/tools/trello-tools/</guid>
-      <description>  Archivierte Karten auf einem Trello-Board löschen.
-API-Schlüssel und Token generieren Trello-API-Schlüssel für Entwickler. (Token widerrufen: Trello  Konto  Anwendungen) 1. Autorisieren API key  API token  Initialize   2. Board aktionen  Board:   Archivierte anzeigen (Interaktiv) Archivierte entfernen (Einfach alle entfernen)    Status output:    </description>
+      <description> Archivierte Karten auf einem Trello-Board löschen.
+API-Schlüssel und Token generieren Trello-API-Schlüssel für Entwickler. (Token widerrufen: Trello &gt; Konto &gt; Anwendungen) 1. Autorisieren API key API token Initialize 2. Board aktionen Board: Archivierte anzeigen (Interaktiv) Archivierte entfernen (Einfach alle entfernen) Status output: </description>
     </item>
     
     <item>
@@ -42,10 +42,11 @@ Converter Website </description>
       <pubDate>Thu, 18 Feb 2021 17:57:26 +0100</pubDate>
       
       <guid>https://cyb10101.github.io/de/posts/password-manager/</guid>
-      <description>Passwort Manager    Ich würde Bitwarden empfehlen und am besten zusätzlich mit einem Authentifikator.
- Bitwarden (Kostenlos/Premium) KeePass (Kostenlos)  Authentifikator    Authy oder Google meistens passend für den ersten Zugriff.
+      <description>Passwort Manager Ich würde Bitwarden empfehlen und am besten zusätzlich mit einem Authentifikator.
+Bitwarden (Kostenlos/Premium) KeePass (Kostenlos) Authentifikator Authy oder Google meistens passend für den ersten Zugriff.
 Bitwarden Authenticator (TOTP) ist nur für Premium erhältlich.
- Authy (Kostenlos) Google Authentificator (Kostenlos) Bitwarden Authenticator (TOTP) (Premium)  Abschalten des Passwort Manager in Firefox    Firefox &amp;gt; Einstellungen &amp;gt; Datenschutz &amp;amp; Sicherheit &amp;gt; Zugangsdaten und Passwörter</description>
+Authy (Kostenlos) Google Authentificator (Kostenlos) Bitwarden Authenticator (TOTP) (Premium) Abschalten des Passwort Manager in Firefox Firefox &amp;gt; Einstellungen &amp;gt; Datenschutz &amp;amp; Sicherheit &amp;gt; Zugangsdaten und Passwörter
+Fragen, ob Zugangsdaten und Passwörter für Websites gespeichert werden sollen = nein Ich will mehr wissen Warum ein Passwort Manager?</description>
     </item>
     
     <item>
@@ -55,7 +56,7 @@ Bitwarden Authenticator (TOTP) ist nur für Premium erhältlich.
       
       <guid>https://cyb10101.github.io/de/games/world-of-warcraft/open-lever-chest/</guid>
       <description>Im Spiel World of Warcraft gibt es im Dungeon Torghast eine hebel Truhe.
- Um die Truhe zu öffnen, müsst ihr alle möglichen Kombinationen durchgehen und eine Kombination öffnet die Kiste. Die 0 für Hebel ist unten und die 1 für der Hebel ist oben.  Ganz einfach ausgedrückt, müsst ihr alle binär Codes durchgehen:  0000000100100011 0100010101100111 1000100110101011 1100110111101111   Zu schwierig zu merken?  Es geht mit dieser Merkhilfe einfacher: 1, Nochmals genauer: 1, 1,</description>
+Um die Truhe zu öffnen, müsst ihr alle möglichen Kombinationen durchgehen und eine Kombination öffnet die Kiste. Die 0 für Hebel ist unten und die 1 für der Hebel ist oben. Ganz einfach ausgedrückt, müsst ihr alle binär Codes durchgehen: 0000000100100011 0100010101100111 1000100110101011 1100110111101111 Zu schwierig zu merken? Es geht mit dieser Merkhilfe einfacher: &gt;1, &lt;2, wiederhole einmal</description>
     </item>
     
     <item>

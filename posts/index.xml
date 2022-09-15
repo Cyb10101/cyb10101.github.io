@@ -23,10 +23,11 @@ Converter Website </description>
       <pubDate>Thu, 18 Feb 2021 17:57:26 +0100</pubDate>
       
       <guid>https://cyb10101.github.io/posts/password-manager/</guid>
-      <description>Password manager    I would recommend Bitwarden and it would be best to also use an authenticator.
- Bitwarden (Free/Premium) KeePass (Free)  Authenticator    Authy or Google mostly suitable for the first access.
+      <description>Password manager I would recommend Bitwarden and it would be best to also use an authenticator.
+Bitwarden (Free/Premium) KeePass (Free) Authenticator Authy or Google mostly suitable for the first access.
 Bitwarden Authenticator (TOTP) is only available for Premium.
- Authy (Free) Google Authentificator (Free) Bitwarden Authenticator (TOTP) (Premium)  Switching off the password manager in Firefox    Firefox &amp;gt; Settings &amp;gt; Privacy &amp;amp; Security &amp;gt; Credentials and Passwords</description>
+Authy (Free) Google Authentificator (Free) Bitwarden Authenticator (TOTP) (Premium) Switching off the password manager in Firefox Firefox &amp;gt; Settings &amp;gt; Privacy &amp;amp; Security &amp;gt; Credentials and Passwords
+Asking whether access data and passwords for websites should be saved = no I want to know more Why a password manager?</description>
     </item>
     
   </channel>
