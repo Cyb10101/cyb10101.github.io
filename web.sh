@@ -23,10 +23,10 @@ startFunction() {
     case ${1} in
         server)
             /usr/local/bin/hugo server --baseURL http://127.0.0.1/ --bind 0.0.0.0 \
-            --buildDrafts --buildExpired --buildFuture --cleanDestinationDir --disableFastRender --i18n-warnings
+            --buildDrafts --buildExpired --buildFuture --cleanDestinationDir --disableFastRender --printI18nWarnings
         ;;
         build)
-            /usr/local/bin/hugo --cleanDestinationDir --i18n-warnings
+            /usr/local/bin/hugo --cleanDestinationDir --printI18nWarnings
         ;;
         version)
             /usr/local/bin/hugo version
