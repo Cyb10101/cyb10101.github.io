@@ -330,7 +330,9 @@ class TmdbWatchlist {
         }
 
         let instance = this;
-        return new Promise((resolve, reject) => this.getApi('account/' + instance.config.accountId + '/' + type + '/watchlist?page=' + page + '&sort_by=release_date.asc&language=de-DE').then(function (data) {
+        // @todo Watchlist "sort by" occurs internal error https://www.themoviedb.org/talk/62f910cae267de007eb85d4b
+        // return new Promise((resolve, reject) => this.getApi('account/' + instance.config.accountId + '/' + type + '/watchlist?page=' + page + '&sort_by=release_date.asc&language=de-DE').then(function (data) {
+        return new Promise((resolve, reject) => this.getApi('account/' + instance.config.accountId + '/' + type + '/watchlist?page=' + page + '&language=de-DE').then(function (data) {
             if (data.hasOwnProperty('results') && data.results.length > 0) {
                 // movies = movies.concat(data.results);
                 for (let i = 0; i < data.results.length; i++) {
