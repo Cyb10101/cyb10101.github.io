@@ -374,7 +374,7 @@ class TmdbWatchlist {
             '<img src="https://www.justwatch.com/appassets/favicon.ico" title="Just Watch" style="width: 32px;">' +
             '</a> ' +
             '<a href="https://www.werstreamt.es/filme-serien/?q=' + movie.title + '" target="_blank">' +
-            '<img src="https://www.werstreamt.es/themes/wse/images/touch-icon-iphone.png" title="Wer streamt es" style="width: 32px;">' +
+            '<img src="https://www.werstreamt.es/_resources/themes/wse/images/touch-icon-iphone.png" title="Wer streamt es" style="width: 32px;">' +
             '</a>';
 
         this.moviesContainer.append(element);
