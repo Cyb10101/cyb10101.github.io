@@ -4,6 +4,7 @@ ENV HUGO_VERSION=0.121.1
 
 RUN curl -fSL -o /tmp/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb && \
     dpkg -i /tmp/hugo.deb && rm /tmp/hugo.deb && \
+    rm /opt/docker/etc/supervisor.d/apache.conf && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 COPY hugo.conf /opt/docker/etc/supervisor.d/
