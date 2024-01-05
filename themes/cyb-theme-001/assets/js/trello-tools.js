@@ -39,7 +39,7 @@ class TrelloTools {
 
         document.getElementById('token').addEventListener('change', (event) => {
             instance.token = event.target.value.trim();
-            console.log(event.target.value.trim());
+            // console.log('token', event.target.value.trim());
             localStorage.setItem('token', instance.token);
             if (instance.key !== '' && instance.token !== '') {
                 instance.loadBoards();

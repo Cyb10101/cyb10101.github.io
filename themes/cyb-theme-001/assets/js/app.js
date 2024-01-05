@@ -36,9 +36,12 @@ import {TrelloTools} from "./trello-tools";
 const page = new Page();
 const navigation = new Navigation();
 const darkMode = new DarkMode();
-const trelloTools = new TrelloTools();
 
 document.addEventListener('DOMContentLoaded', () => {
+    if (document.querySelector('.js-trello-tools')) {
+        const trelloTools = new TrelloTools();
+    }
+
     if (document.querySelector('.js-tmdb-watchlist')) {
         const tmdbWatchlist = new TmdbWatchlist();
         tmdbWatchlist.initialize();
