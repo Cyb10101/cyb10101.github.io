@@ -2,11 +2,11 @@ version: '3.8'
 
 services:
   web:
-    build: ./build-dev
+    build: .
     hostname: cyb10101-github
-    ports:
-      - 1313:1313
-      - 35729:35729
+    #ports:
+    #  - 1313:1313
+    #  - 35729:35729
     volumes:
       - .:/app
       - /var/run/docker.sock:/var/run/docker.sock:ro
@@ -32,6 +32,16 @@ services:
 
       # PHP_DEBUGGER: xdebug, blackfire or none
       - PHP_DEBUGGER=${PHP_DEBUGGER:-none}
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.cyb10101_github.rule=Host(`github.cyb10101.localhost`)
+      - traefik.http.services.cyb10101_github.loadbalancer.server.port=443
+      #- traefik.http.routers.cyb10101_github.middlewares=redirect-www@file
+
+      # TLS
+      - traefik.http.routers.cyb10101_github.entrypoints=websecure
+      - traefik.http.routers.cyb10101_github.tls=true
+      #- traefik.http.routers.cyb10101_github.tls.certresolver=letsEncrypt
     working_dir: /app
 
   node:

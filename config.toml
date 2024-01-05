@@ -1,5 +1,4 @@
 baseURL = "https://cyb10101.github.io/"
-#baseURL = "http://github.cyb10101.localhost/"
 #languageCode = "en-us"  # This is a comment
 languageCode = "en"
 title = "Cyb10101"
