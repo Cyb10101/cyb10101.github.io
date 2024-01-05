@@ -6,67 +6,49 @@
     <description>Recent content on Cyb10101</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 07 Nov 2021 17:58:26 +0100</lastBuildDate><atom:link href="https://cyb10101.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 07 Nov 2021 17:58:26 +0100</lastBuildDate>
+    <atom:link href="https://cyb10101.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Watchlists from The Movie Database</title>
       <link>https://cyb10101.github.io/tools/tmdb-watchlist/</link>
       <pubDate>Sun, 07 Nov 2021 17:58:26 +0100</pubDate>
-      
       <guid>https://cyb10101.github.io/tools/tmdb-watchlist/</guid>
       <description> 1: API token for read access (v4 auth) Get API token on The Movie Database. Saved in local storage. 2: Get Watchlists (Mabye initilize to get a access token) Initialize Get Watchlists 3: Filter Provider with flatrate Movies Accept request token Confirm request token in new window for the access token from The Movie Database! Token confirmed </description>
     </item>
-    
     <item>
       <title>Trello tools</title>
       <link>https://cyb10101.github.io/tools/trello-tools/</link>
       <pubDate>Thu, 04 Nov 2021 00:00:00 +0100</pubDate>
-      
       <guid>https://cyb10101.github.io/tools/trello-tools/</guid>
-      <description> Delete archived cards on a trello board.
-Generate API key and token in Trello API key for developers. (Revoke token: Trello &gt; Account &gt; Applications) 1. Authorize API key API token Initialize 2. Board actions Board: List archived (Interactive) Remove archived (Just remove all) Status output: </description>
+      <description> Delete archived cards on a trello board.&#xA;Generate API key and token in Trello API key for developers. (Revoke token: Trello &gt; Account &gt; Applications) 1. Authorize API key API token Initialize 2. Board actions Board: List archived (Interactive) Remove archived (Just remove all) Status output: </description>
     </item>
-    
     <item>
       <title>Bitwarden to printer</title>
       <link>https://cyb10101.github.io/posts/bitwarden-print/</link>
       <pubDate>Thu, 18 Feb 2021 17:58:26 +0100</pubDate>
-      
       <guid>https://cyb10101.github.io/posts/bitwarden-print/</guid>
-      <description> Converts a JSON export from Bitwarden into a printable document.
-Converter Website </description>
+      <description> Converts a JSON export from Bitwarden into a printable document.&#xA;Converter Website </description>
     </item>
-    
     <item>
       <title>Password manager</title>
       <link>https://cyb10101.github.io/posts/password-manager/</link>
       <pubDate>Thu, 18 Feb 2021 17:57:26 +0100</pubDate>
-      
       <guid>https://cyb10101.github.io/posts/password-manager/</guid>
-      <description>Password manager I would recommend Bitwarden and it would be best to also use an authenticator.
-Bitwarden (Free/Premium) KeePass (Free) Authenticator Authy or Google mostly suitable for the first access.
-Bitwarden Authenticator (TOTP) is only available for Premium.
-Authy (Free) Google Authentificator (Free) Bitwarden Authenticator (TOTP) (Premium) Switching off the password manager in Firefox Firefox &amp;gt; Settings &amp;gt; Privacy &amp;amp; Security &amp;gt; Credentials and Passwords
-Asking whether access data and passwords for websites should be saved = no I want to know more Why a password manager?</description>
+      <description>Password manager I would recommend Bitwarden and it would be best to also use an authenticator.&#xA;Bitwarden (Free/Premium) KeePass (Free) Authenticator Authy or Google mostly suitable for the first access.&#xA;Bitwarden Authenticator (TOTP) is only available for Premium.&#xA;Authy (Free) Google Authentificator (Free) Bitwarden Authenticator (TOTP) (Premium) Switching off the password manager in Firefox Firefox &amp;gt; Settings &amp;gt; Privacy &amp;amp; Security &amp;gt; Credentials and Passwords&#xA;Asking whether access data and passwords for websites should be saved = no I want to know more Why a password manager?</description>
     </item>
-    
     <item>
       <title>About</title>
       <link>https://cyb10101.github.io/about/</link>
       <pubDate>Fri, 12 Feb 2021 14:58:51 +0100</pubDate>
-      
       <guid>https://cyb10101.github.io/about/</guid>
       <description>About</description>
     </item>
-    
     <item>
       <title>Open the lever chest in Torghast</title>
       <link>https://cyb10101.github.io/games/world-of-warcraft/open-lever-chest/</link>
       <pubDate>Fri, 12 Feb 2021 14:58:51 +0100</pubDate>
-      
       <guid>https://cyb10101.github.io/games/world-of-warcraft/open-lever-chest/</guid>
-      <description>In the game World of Warcraft there is a lever chest in the dungeon Torghast.
-To open the chest, you have to go through all possible combinations and one combination opens the box. The 0 for lever is down and the 1 for lever is up. Simply put, you have to go through all of the binary codes: 0000000100100011 0100010101100111 1000100110101011 1100110111101111 Too difficult to remember? It is easier with this memory aid: &gt;1, &lt;2, repeat once</description>
+      <description>In the game World of Warcraft there is a lever chest in the dungeon Torghast.&#xA;To open the chest, you have to go through all possible combinations and one combination opens the box. The 0 for lever is down and the 1 for lever is up. Simply put, you have to go through all of the binary codes: 0000000100100011 0100010101100111 1000100110101011 1100110111101111 Too difficult to remember? It is easier with this memory aid: &gt;1, &lt;2, repeat once</description>
     </item>
-    
   </channel>
 </rss>

@@ -5,30 +5,22 @@
     <link>https://cyb10101.github.io/de/posts/</link>
     <description>Recent content in Blog on Cyb10101</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Fri, 12 Feb 2021 14:58:51 +0100</lastBuildDate><atom:link href="https://cyb10101.github.io/de/posts/index.xml" rel="self" type="application/rss+xml" />
+    <language>de</language>
+    <lastBuildDate>Fri, 12 Feb 2021 14:58:51 +0100</lastBuildDate>
+    <atom:link href="https://cyb10101.github.io/de/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bitwarden zu Drucker</title>
       <link>https://cyb10101.github.io/de/posts/bitwarden-print/</link>
       <pubDate>Thu, 18 Feb 2021 17:58:26 +0100</pubDate>
-      
       <guid>https://cyb10101.github.io/de/posts/bitwarden-print/</guid>
-      <description> Konvertiert einen JSON Export von Bitwarden in ein druckbares Dokument.
-Converter Website </description>
+      <description> Konvertiert einen JSON Export von Bitwarden in ein druckbares Dokument.&#xA;Converter Website </description>
     </item>
-    
     <item>
       <title>Passwort Manager</title>
       <link>https://cyb10101.github.io/de/posts/password-manager/</link>
       <pubDate>Thu, 18 Feb 2021 17:57:26 +0100</pubDate>
-      
       <guid>https://cyb10101.github.io/de/posts/password-manager/</guid>
-      <description>Passwort Manager Ich würde Bitwarden empfehlen und am besten zusätzlich mit einem Authentifikator.
-Bitwarden (Kostenlos/Premium) KeePass (Kostenlos) Authentifikator Authy oder Google meistens passend für den ersten Zugriff.
-Bitwarden Authenticator (TOTP) ist nur für Premium erhältlich.
-Authy (Kostenlos) Google Authentificator (Kostenlos) Bitwarden Authenticator (TOTP) (Premium) Abschalten des Passwort Manager in Firefox Firefox &amp;gt; Einstellungen &amp;gt; Datenschutz &amp;amp; Sicherheit &amp;gt; Zugangsdaten und Passwörter
-Fragen, ob Zugangsdaten und Passwörter für Websites gespeichert werden sollen = nein Ich will mehr wissen Warum ein Passwort Manager?</description>
+      <description>Passwort Manager Ich würde Bitwarden empfehlen und am besten zusätzlich mit einem Authentifikator.&#xA;Bitwarden (Kostenlos/Premium) KeePass (Kostenlos) Authentifikator Authy oder Google meistens passend für den ersten Zugriff.&#xA;Bitwarden Authenticator (TOTP) ist nur für Premium erhältlich.&#xA;Authy (Kostenlos) Google Authentificator (Kostenlos) Bitwarden Authenticator (TOTP) (Premium) Abschalten des Passwort Manager in Firefox Firefox &amp;gt; Einstellungen &amp;gt; Datenschutz &amp;amp; Sicherheit &amp;gt; Zugangsdaten und Passwörter&#xA;Fragen, ob Zugangsdaten und Passwörter für Websites gespeichert werden sollen = nein Ich will mehr wissen Warum ein Passwort Manager?</description>
     </item>
-    
   </channel>
 </rss>
