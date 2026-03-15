@@ -150,22 +150,56 @@ class TrelloTools {
         for (const card of cards) {
             i++;
             this.log('# ' + i + ' of ' + cards.length + ' - Deleting card: ' + card.name);
-            let deleteResponse = await fetch(this.getApiUrl('1/cards/' + card.id), {method: 'DELETE'});
+            await this.fetchWithRetry(this.getApiUrl('1/cards/' + card.id), {
+                method: 'DELETE',
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
         }
         this.log('Batch deleting complete!')
     }
 
-    removeCard(cardId) {
-        return fetch(this.getApiUrl('1/cards/' + cardId), {
+    async fetchWithRetry(url, options = {}, retries = 5, delay = 1000) {
+        for (let i = 0; i <= retries; i++) {
+            const response = await fetch(url, options);
+
+            // Success
+            if (response.ok) {
+                return response.json();
+            }
+
+            // Closed boards cannot be edited
+            if (response.status === 409) {
+                throw new Error(`Response status: ${response.status} ${await response.text()}`);
+            }
+
+            // Rate limit
+            if (response.status === 429) {
+                this.log('Too many requests! Retry after rate limit ...');
+                if (i === retries) {
+                    throw new Error("Too many requests - retries exhausted");
+                }
+
+                // optional Retry-After header
+                const retryAfter = response.headers.get("Retry-After");
+                console.log('retryAfter', retryAfter);
+                const wait = retryAfter ? parseInt(retryAfter, 10) * 1000 : delay;
+                await new Promise(r => setTimeout(r, wait));
+                continue;
+            }
+
+            // Other error
+            throw new Error(`HTTP error ${response.status}`);
+        }
+    }
+
+    async removeCard(cardId) {
+        return await this.fetchWithRetry(this.getApiUrl('1/cards/' + cardId), {
             method: 'DELETE',
             headers: {
                 'Accept': 'application/json'
             }
-        }).then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not OK');
-            }
-            return response.json();
         });
     }
 
@@ -239,12 +273,12 @@ class TrelloTools {
         div.querySelector('.js-remove').addEventListener('click', (event) => {
             let inputs = div.querySelectorAll('tbody td input:checked');
             if (inputs.length > 0) {
-                inputs.forEach(input => {
+                inputs.forEach(async input => {
                     let cardId = input.value;
-                    instance.removeCard(cardId).then((data) => {
+                    await instance.removeCard(cardId).then((data) => {
                         input.parentElement.parentElement.remove();
                     }).catch((error) => {
-                        instance.log('Error delete card: ' + cardId);
+                        instance.log('Error delete card: ' + cardId + ' | ' + error);
                         console.error('Error:', error);
                     });
                 });
