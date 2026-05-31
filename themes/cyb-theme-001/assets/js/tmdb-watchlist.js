@@ -368,13 +368,13 @@ class TmdbWatchlist {
         element.classList.add('movie');
         element.innerHTML = '' +
             '<a href="' + this.config.website + movie.type + '/' + movie.id + '" target="_blank">' +
-            '<img src="' + this.netslumCacheDirectUrl + this.config.imageUrl + movie.image + '" loading="lazy">' +
+                '<img src="' + this.netslumCacheDirectUrl + this.config.imageUrl + movie.image + '" class="poster" loading="lazy">' +
             '</a><br>' + movie.title + ' (' + movie.year + ')' + '<br>' +
             '<a href="https://www.justwatch.com/de/Suche?q=' + movie.title + '" target="_blank">' +
-            '<img src="https://www.justwatch.com/appassets/favicon.ico" title="Just Watch" style="width: 32px;">' +
+                '<img src="https://www.justwatch.com/appassets/favicon.ico" title="Just Watch" style="width: 32px;">' +
             '</a> ' +
             '<a href="https://www.werstreamt.es/filme-serien/?q=' + movie.title + '" target="_blank">' +
-            '<img src="https://www.werstreamt.es/_resources/themes/wse/images/touch-icon-iphone.png" title="Wer streamt es" style="width: 32px;">' +
+                '<img src="https://www.werstreamt.es/_resources/themes/wse/images/touch-icon-iphone.png" title="Wer streamt es" style="width: 32px;">' +
             '</a>';
 
         this.moviesContainer.append(element);

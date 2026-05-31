@@ -5,9 +5,10 @@
         align-items: stretch;
         justify-content: space-between;
     }
+
     .movie {
         display: inline-block;
-        width: 195px;
+        width: 200px;
         margin: 0 10px 10px 0;
         padding: 4px;
         text-align: center;
@@ -15,14 +16,21 @@
         border: 1px solid transparent;
         border-radius: 4px;
         transition: border-color 400ms, background-color 400ms;
+
+        .poster {
+            width: 100%;
+        }
     }
+
     .movie:hover {
         border-color: #123123;
         background-color: aliceblue;
     }
+
     .provider {
         width: 32px;
     }
+
     .js-providers .provider-check {
         vertical-align: top;
         width: 23% !important;
