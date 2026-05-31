@@ -14,7 +14,7 @@ class TmdbWatchlist {
             accountId: '', // API Account
 
             website: 'https://themoviedb.org/',
-            imageUrl: 'https://image.tmdb.org/t/p/w185_and_h278_bestv2',
+            imageUrl: 'https://image.tmdb.org/t/p/w300_and_h450_bestv2',
             providerTop: [
                 8, // Netflix
                 175, // Netflix Kids
