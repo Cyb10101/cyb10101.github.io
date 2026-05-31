@@ -123,8 +123,8 @@ class TmdbWatchlist {
 
         return new Promise((resolve, reject) => {
             fetch(url, {
-                mode: 'cors',
-                cache: 'no-cache',
+                // mode: 'cors',
+                // cache: 'no-cache',
                 method: method,
                 headers: headers,
                 body: data
