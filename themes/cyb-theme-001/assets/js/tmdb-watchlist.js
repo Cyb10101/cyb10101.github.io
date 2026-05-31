@@ -108,6 +108,10 @@ class TmdbWatchlist {
         this.status.innerHTML = message;
     }
 
+    sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
     getAjax(url, headers, data) {
         let method = 'GET';
         if (!(typeof headers === 'object' && headers !== null)) {
@@ -122,35 +126,46 @@ class TmdbWatchlist {
         headers['Accept'] = 'application/json';
 
         return new Promise((resolve, reject) => {
-            fetch(url, {
-                // mode: 'cors',
-                // cache: 'no-cache',
-                method: method,
-                headers: headers,
-                body: data
-            }).then(result => result.json()).then(object => {
+            this.requestWithRetry(url, method, headers, data).then(object => {
                 resolve(object);
             }).catch(error => {
-                console.error('Ajax request_token:', error);
+                console.error('Ajax Error:', error);
                 reject(error.responseText);
             });
-
-            /*
-            @todo @deprecated if something fail
-            $.ajax({
-                async: true,
-                crossDomain: true,
-                url: url,
-                headers: headers,
-                method: method,
-                contentType: 'application/json; charset=utf-8',
-                data: data
-            }).done(function(response) {
-                resolve(response);
-            }).fail(function(response) {
-                reject(response.responseText);
-            });*/
         });
+    }
+
+    async requestWithRetry(url, method, headers, data) {
+        const instance = this;
+        const retryDelays = [10000, 20000, 30000];
+
+        for (let attempt = 0; attempt <= retryDelays.length; attempt++) {
+            try {
+                const result = await fetch(url, {
+                    method: method,
+                    headers: headers,
+                    body: data
+                });
+
+                const object = await result.json();
+
+                if (object && object.status_code === 25 && attempt < retryDelays.length) {
+                    console.warn(`Too many requests. Retry ${attempt + 1} in ${retryDelays[attempt] / 1000}s`);
+                    await instance.sleep(retryDelays[attempt]);
+                    continue;
+                }
+
+                return object;
+            } catch (error) {
+                console.error('Ajax request_token:', error);
+
+                if (attempt < retryDelays.length) {
+                    await instance.sleep(retryDelays[attempt]);
+                    continue;
+                }
+                throw error;
+            }
+        }
     }
 
     getApi3(path, data) {
