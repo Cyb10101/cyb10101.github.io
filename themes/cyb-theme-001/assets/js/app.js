@@ -11,7 +11,6 @@ import './font-awesome.js';
 import {Page} from './page.js';
 import {Navigation} from './navigation.js';
 import {DarkMode} from './dark-mode.js';
-import {TmdbWatchlist} from './tmdb-watchlist.js';
 import {TrelloTools} from "./trello-tools";
 
 // @todo jquery bug with bootstrap
@@ -40,10 +39,5 @@ const darkMode = new DarkMode();
 document.addEventListener('DOMContentLoaded', () => {
     if (document.querySelector('.js-trello-tools')) {
         const trelloTools = new TrelloTools();
-    }
-
-    if (document.querySelector('.js-tmdb-watchlist')) {
-        const tmdbWatchlist = new TmdbWatchlist();
-        tmdbWatchlist.initialize();
     }
 });
